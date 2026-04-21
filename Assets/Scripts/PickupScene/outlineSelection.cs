@@ -30,9 +30,15 @@ public class OutlineSelection : MonoBehaviour
     private Transform selection;
     private RaycastHit raycastHit;
 
+    public Transform player;
+    public float detectionRadius = 5f;
+    private bool isPlayerNearby = false;
+
     void Update()
     {
-        if (Mouse.current == null)
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if (Mouse.current == null || player == null)
             return;
 
         // Highlight
@@ -70,7 +76,8 @@ public class OutlineSelection : MonoBehaviour
                 highlight = null;
             }
         }
-
+    }
+        /*
         // Selection
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -101,6 +108,5 @@ public class OutlineSelection : MonoBehaviour
                     selection = null;
                 }
             }
-        }
-    }
+        } */
 }
