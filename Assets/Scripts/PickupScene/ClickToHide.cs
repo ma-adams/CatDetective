@@ -12,7 +12,7 @@ public class ClickToHide : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (hit.transform == transform)
+            if (hit.transform == transform && hit.transform.GetComponent<Outline>().enabled == true)
             {
                 gameObject.SetActive(false);
             }

@@ -304,6 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02a45024e9d644ca864c8140524255a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineSelection
+  player: {fileID: 469276667}
+  detectionRadius: 2
+  outlineColor: {r: 1, g: 0.857973, b: 0, a: 1}
+  outlineWidth: 7
 --- !u!4 &139059621
 Transform:
   m_ObjectHideFlags: 0
@@ -340,7 +344,7 @@ GameObject:
   - component: {fileID: 469276669}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
