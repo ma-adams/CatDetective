@@ -1,4 +1,4 @@
-//honestly generated this with chatgpt, clips through objects and more complicated than necessary
+//should look thorugh this again
 //but works for the pickup scene's needs
 
 using UnityEngine;
