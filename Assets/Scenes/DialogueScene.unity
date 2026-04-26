@@ -597,6 +597,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215543883}
   m_CullTransparentMesh: 1
+--- !u!1 &246930336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246930338}
+  - component: {fileID: 246930337}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &246930337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246930336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa70f8ff52314926a2bbd22af6b548e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+--- !u!4 &246930338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246930336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &405658195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1147,7 @@ GameObject:
   - component: {fileID: 933952560}
   - component: {fileID: 933952559}
   - component: {fileID: 933952558}
+  - component: {fileID: 933952561}
   m_Layer: 5
   m_Name: TestButton
   m_TagString: Untagged
@@ -1173,7 +1218,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 933952559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 933952561}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &933952559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,6 +1269,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933952556}
   m_CullTransparentMesh: 1
+--- !u!114 &933952561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933952556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - There are three clickable drinks in front of you
+    - Pick up all of them
+    - There are three of them
 --- !u!1 &974702581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,9 +1556,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e808c8daa18fbf4996e4dd52832dc8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1848595942}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e808c8daa18fbf4996e4dd52832dc8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1848595943}
   m_SourcePrefab: {fileID: 100100000, guid: 6e808c8daa18fbf4996e4dd52832dc8b, type: 3}
 --- !u!1 &1103938583
 GameObject:
@@ -2128,24 +2199,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.28488445, y: 0.3476444, z: 0.24200535}
   m_Center: {x: -0.006923184, y: -0.049270723, z: 0}
---- !u!114 &1848595943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848595939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
 --- !u!4 &1932790780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0efd7ddf136b7cc4a92aeb19a674af21, type: 3}
@@ -2528,6 +2587,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 246930338}
   - {fileID: 1103938586}
   - {fileID: 2072277906}
   - {fileID: 1286072796}
