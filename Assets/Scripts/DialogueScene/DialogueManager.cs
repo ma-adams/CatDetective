@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        Debug.Log("DialogueManager initialized.");
     }
     public void StartDialogue(Dialogue dialogue) 
     {
@@ -24,8 +25,10 @@ public class DialogueManager : MonoBehaviour
 
         sentences.Clear();
 
+        Debug.Log("Dialogue has " + dialogue.sentences.Length + " sentences.");
         foreach (string sentence in dialogue.sentences)
         {
+            Debug.Log("Adding sentence: " + sentence);
             sentences.Enqueue(sentence);
         }
 
@@ -33,13 +36,15 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence()
     {
+        Debug.Log("Sentences remaining: " + sentences.Count);
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-
         string sentence = sentences.Dequeue();
+        Debug.Log("Displaying sentence: " + sentence);
+        Debug.Log("Sentences left after dequeue: " + sentences.Count);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
