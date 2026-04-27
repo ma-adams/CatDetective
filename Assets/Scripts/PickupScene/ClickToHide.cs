@@ -14,6 +14,7 @@ public class ClickToHide : MonoBehaviour
         {
             if (hit.transform == transform && hit.transform.GetComponent<Outline>().enabled == true)
             {
+                hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
                 gameObject.SetActive(false);
             }
         }
