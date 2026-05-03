@@ -2555,12 +2555,16 @@ PrefabInstance:
       value: DialogueCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 856358827}
     - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextSentence
+      value: OnContinueButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 1121812739032445297, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_Name
@@ -2576,7 +2580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476774866283564445, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_margin.x
-      value: -793.6483
+      value: -707.6239
       objectReference: {fileID: 0}
     - target: {fileID: 1476774866283564445, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_margin.y
@@ -2584,15 +2588,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476774866283564445, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_margin.z
-      value: -798.61835
+      value: -712.4463
       objectReference: {fileID: 0}
     - target: {fileID: 1476774866283564445, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1242
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625756274385685419, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3
+      value: 101.100006
       objectReference: {fileID: 0}
     - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_Pivot.x
@@ -2708,7 +2740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566027449577549232, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 641
+      value: 555
       objectReference: {fileID: 0}
     - target: {fileID: 8566027449577549232, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3419,6 +3451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
+  player: {fileID: 1382882022}
+  npc: {fileID: 1490096670}
+  detectionRadius: 3
 --- !u!65 &1490096673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3641,6 +3676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
+  player: {fileID: 1382882022}
+  npc: {fileID: 1575401706}
+  detectionRadius: 3
 --- !u!65 &1575401709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4492,6 +4530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  player: {fileID: 1382882022}
+  npc: {fileID: 1991302278}
+  detectionRadius: 3
 --- !u!65 &1991302282
 BoxCollider:
   m_ObjectHideFlags: 0
