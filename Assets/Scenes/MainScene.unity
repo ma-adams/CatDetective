@@ -410,7 +410,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5921818952243144817, guid: 6168b361ae0ec407ba8990933acb709f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603513935}
   m_SourcePrefab: {fileID: 100100000, guid: 6168b361ae0ec407ba8990933acb709f, type: 3}
 --- !u!1 &259518631
 GameObject:
@@ -3715,6 +3718,24 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Ooh! I found a Meowjito!
+--- !u!1 &1603513932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5921818952243144817, guid: 6168b361ae0ec407ba8990933acb709f, type: 3}
+  m_PrefabInstance: {fileID: 188875118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603513935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603513932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05bed28157804c9a9aebd0dc596533e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionManager
+  detectionRadius: 3
 --- !u!1 &1657678701
 GameObject:
   m_ObjectHideFlags: 0
