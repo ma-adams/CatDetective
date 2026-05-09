@@ -4,22 +4,17 @@ using System.Collections.Generic;
 
 public class MainManager : MonoBehaviour
 {
+
+    public static MainManager mainManager;
+
     public List<string> quests = new();
     public List<string> completedQuests = new();
     public List<string> inventory = new();
-    public static MainManager mainManager;
+
+    private Dictionary<string, QuestData> questRegistry = new();
 
     public System.Action onQuestsChanged;
 
-    public void AddQuest(string questId)
-    {
-        if (!quests.Contains(questId))
-        {
-            quests.Add(questId);
-            onQuestsChanged?.Invoke();
-        }
-    }
-    
     //makes sure there is only one instace of main manager throughout game
     //can transition between scenes without losing data
     private void Awake()
@@ -32,6 +27,29 @@ public class MainManager : MonoBehaviour
 
         mainManager = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void RegisterQuest(QuestData data)
+    {
+        if (!questRegistry.ContainsKey(data.questId))
+        {
+            questRegistry[data.questId] = data;
+        }
+    }
+
+    public QuestData GetQuestData(string questId) 
+    {
+        questRegistry.TryGetValue(questId, out QuestData data);
+        return data;
+    }    
+
+    public void AddQuest(string questId)
+    {
+        if (!quests.Contains(questId))
+        {
+            quests.Add(questId);
+            onQuestsChanged?.Invoke();
+        }
     }
 
     public bool HasItem(string itemId) => inventory.Contains(itemId);
