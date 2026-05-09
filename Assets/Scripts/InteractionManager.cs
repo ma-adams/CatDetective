@@ -34,7 +34,7 @@ public class InteractionManager : MonoBehaviour
         if (closest != null)
         {
             closest.GetComponent<DialogueTrigger>()?.TriggerDialogue();
-            closest.SetActive(false);
+            closest.GetComponent<ClickToHide>()?.PickUp();
         }
     }
 }

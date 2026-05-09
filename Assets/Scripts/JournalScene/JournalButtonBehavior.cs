@@ -11,6 +11,22 @@ public class JournalButtonBehavior : MonoBehaviour {
     [SerializeField] private string[] noQuestsText;
     private bool openBook;
 
+    void Start()
+    {
+        if (MainManager.mainManager != null)
+        {
+            MainManager.mainManager.onQuestsChanged += ShowNotification;
+        }
+    }
+
+    void ShowNotification()
+    {
+        if (notification != null)
+        {
+            notification.SetActive(true);
+        }
+    }
+
     public void OpenQuestBook()
     {
         openBook = !openBook;
@@ -36,22 +52,24 @@ public class JournalButtonBehavior : MonoBehaviour {
 
     private void WriteQuests()
     {
-        if (questTextBox != null)
+        if (questTextBox == null) return;
+        if (MainManager.mainManager == null)
         {
-            if (MainManager.mainManager.quests.Count == 0)
+            questTextBox.text = "No journal data found.";
+            return;
+        }
+        if (MainManager.mainManager.quests.Count == 0)
+        {
+            if (noQuestsText != null && noQuestsText.Length > 0)
             {
-                if (noQuestsText != null)
-                {
-                    int randomnumber = (Random.Range(0, noQuestsText.Length));
-                    questTextBox.text = noQuestsText[randomnumber];
-                }
+                questTextBox.text = noQuestsText[Random.Range(0, noQuestsText.Length)];
             }
             else
             {
                 StringBuilder stringBuilder = new();
                 foreach (string quest in MainManager.mainManager.quests)
                 {
-                    stringBuilder.AppendLine(quest);
+                    stringBuilder.AppendLine("•" + quest);
                 }
                 questTextBox.text = stringBuilder.ToString();
             }

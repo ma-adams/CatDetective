@@ -13,16 +13,18 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private bool isTyping = false;
     private string currentSentence = "";
+    private DialogueTrigger currentTrigger;
+    private Dialogue currentDialogue;
 
     void Start()
     {
         sentences = new Queue<string>();
-        Debug.Log("DialogueManager initialized.");
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger = null)
     {
-        Debug.Log("Starting conversation...");
+        currentTrigger = trigger;
+        currentDialogue = dialogue;
         animator.SetBool("isOpen", true);
         sentences.Clear();
 
@@ -75,10 +77,29 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
-    void EndDialogue()
+    void EndDialogue() 
     {
-        Debug.Log("End of conversation.");
-        dialogueText.text = "Meow";
-        animator.SetBool("isOpen", false);
+    animator.SetBool("isOpen", false);
+
+    if (currentTrigger == null || currentDialogue == null) return;
+    if (MainManager.mainManager == null)
+    {
+        Debug.LogError("MainManager missing from scene!");
+        return;
+    }
+
+    if (!string.IsNullOrEmpty(currentDialogue.startQuestId))
+        MainManager.mainManager.AddQuest(currentDialogue.startQuestId);
+
+    if (!string.IsNullOrEmpty(currentDialogue.completeQuestId))
+    {
+        MainManager.mainManager.quests.Remove(currentDialogue.completeQuestId);
+        MainManager.mainManager.completedQuests.Add(currentDialogue.completeQuestId);
+        if (!string.IsNullOrEmpty(currentTrigger.requiredItem))
+            MainManager.mainManager.RemoveItem(currentTrigger.requiredItem);
+    }
+
+    currentTrigger = null;
+    currentDialogue = null;
     }
 }

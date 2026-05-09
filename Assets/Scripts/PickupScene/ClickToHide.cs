@@ -7,6 +7,8 @@ public class ClickToHide : MonoBehaviour
     public Transform npc;
     public float detectionRadius = 3f;
 
+    [SerializeField] private string itemId; 
+
     void Update()
     {
         // mouse click
@@ -19,9 +21,15 @@ public class ClickToHide : MonoBehaviour
         {
             if (hit.transform == transform && hit.transform.GetComponent<Outline>().enabled == true)
             {
-                hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
-                gameObject.SetActive(false);
+                PickUp();
             }
         }
+    }
+
+    public void PickUp() {
+        if (!string.IsNullOrEmpty(itemId)) {
+            MainManager.mainManager.AddItem(itemId);
+        }
+        gameObject.SetActive(false);
     }
 }
