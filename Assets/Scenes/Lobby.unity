@@ -3307,7 +3307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02a45024e9d644ca864c8140524255a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineSelection
-  player: {fileID: 0}
+  player: {fileID: 209793226}
   detectionRadius: 2
   outlineColor: {r: 1, g: 0.857973, b: 0, a: 1}
   outlineWidth: 7
