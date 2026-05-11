@@ -95,8 +95,15 @@ public class DialogueManager : MonoBehaviour
     {
         MainManager.mainManager.quests.Remove(currentDialogue.completeQuestId);
         MainManager.mainManager.completedQuests.Add(currentDialogue.completeQuestId);
+
+        // Remove single item (existing quests)
         if (!string.IsNullOrEmpty(currentTrigger.requiredItem))
             MainManager.mainManager.RemoveItem(currentTrigger.requiredItem);
+
+        // Remove multiple items (new multi-item quests)
+        if (currentTrigger.requiredItems != null)
+            foreach (string item in currentTrigger.requiredItems)
+                MainManager.mainManager.RemoveItem(item);
     }
 
     currentTrigger = null;

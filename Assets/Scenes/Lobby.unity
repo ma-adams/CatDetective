@@ -2344,6 +2344,7 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: CocktailVar3
+  requiredItems: []
   questId: patron_quest
 --- !u!1001 &237624979
 PrefabInstance:
@@ -10001,7 +10002,13 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
-  questId: 
+  requiredItems:
+  - Trashbag A (1)
+  - Trashbag A
+  - Cardboard Box A (1)
+  - Cardboard Box B
+  - Cardboard Box B (1)
+  questId: bellhop_quest
 --- !u!114 &1095349679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10402,7 +10409,7 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 3
-  itemId: 
+  itemId: Cardboard Box B
 --- !u!65 &1181715738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17981,6 +17988,7 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: moneyRoll
+  requiredItems: []
   questId: bar_quest
 --- !u!114 &1519548519
 MonoBehaviour:
@@ -18787,7 +18795,7 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 3
-  itemId: 
+  itemId: Trashbag A (1)
 --- !u!65 &1592738230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18959,7 +18967,7 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 3
-  itemId: 
+  itemId: Cardboard Box B (1)
 --- !u!65 &1618985125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19998,6 +20006,7 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
+  requiredItems: []
   questId: 
 --- !u!114 &1781403653
 MonoBehaviour:
@@ -20754,7 +20763,7 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 3
-  itemId: 
+  itemId: Cardboard Box A (1)
 --- !u!65 &1868188160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21201,7 +21210,7 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 3
-  itemId: 
+  itemId: Trashbag A
 --- !u!65 &1898517059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27051,6 +27060,7 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: SM_bracelet
+  requiredItems: []
   questId: music_quest
 --- !u!114 &1995693085
 MonoBehaviour:
