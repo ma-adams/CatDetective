@@ -34,6 +34,7 @@ public class InteractionManager : MonoBehaviour
         if (closest != null)
         {
             closest.GetComponent<DialogueTrigger>()?.TriggerDialogue();
+            closest.GetComponent<ConditionalPickup>()?.Pickup();
             closest.GetComponent<ClickToHide>()?.PickUp();
         }
     }
