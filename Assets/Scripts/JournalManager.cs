@@ -50,24 +50,30 @@ public class JournalManager : MonoBehaviour
 
     public void ToggleJournal()
     {
-        isOpen = !isOpen;
-        journalPanel.SetActive(isOpen);
-        if (isOpen)
+        bool shouldOpen = !journalPanel.activeSelf;
+        journalPanel.SetActive(shouldOpen);
+
+        if (shouldOpen)
         {
+            isOpen = true;
             if (notification != null) notification.SetActive(false);
-            RefreshButtons();
-            // Default to main mystery on open
-            ShowMainMystery();
+            RefreshButtons();      // always refresh on open
+            ShowMainMystery();     // always reset to main page on open
+        }
+        else
+        {
+            isOpen = false;
         }
     }
 
     private void OnQuestsChanged()
     {
+        Debug.Log("OnQuestsChanged fired, panel active: " + journalPanel.activeSelf);
         if (notification != null) notification.SetActive(true);
-        if (isOpen)
+        
+        if (journalPanel.activeSelf)
         {
             RefreshButtons();
-            // Refresh whichever page is currently showing
             if (selectedQuestId == null)
                 ShowMainMystery();
             else
@@ -77,17 +83,21 @@ public class JournalManager : MonoBehaviour
 
     private void RefreshButtons()
     {
+        Debug.Log("RefreshButtons reading from instance: " + MainManager.mainManager.GetInstanceID());
         if (MainManager.mainManager == null) return;
 
         questButtons[0].SetActive(true);
         questButtonLabels[0].text = mainMysteryTitle;
 
-        // Build a combined list with no duplicates, completed quests first
         List<string> allQuests = new();
         foreach (string q in MainManager.mainManager.completedQuests)
             if (!allQuests.Contains(q)) allQuests.Add(q);
         foreach (string q in MainManager.mainManager.quests)
             if (!allQuests.Contains(q)) allQuests.Add(q);
+
+        Debug.Log("RefreshButtons: total quests = " + allQuests.Count);
+        for (int i = 0; i < allQuests.Count; i++)
+            Debug.Log("Quest " + i + ": " + allQuests[i]);
 
         for (int i = 1; i < questButtons.Length; i++)
         {
@@ -96,8 +106,8 @@ public class JournalManager : MonoBehaviour
             {
                 string questId = allQuests[questIndex];
                 QuestData data = MainManager.mainManager.GetQuestData(questId);
+                Debug.Log("Button " + i + " questId: " + questId + " data: " + (data != null ? data.displayName : "NULL"));
                 questButtons[i].SetActive(true);
-                // Fall back to questId if data not registered yet
                 questButtonLabels[i].text = data != null ? data.displayName : questId;
             }
             else
@@ -109,20 +119,26 @@ public class JournalManager : MonoBehaviour
 
     private void OnQuestButtonClicked(int index)
     {
+        Debug.Log("Button clicked: " + index);
         if (index == 0)
         {
+            selectedQuestId = null;
             ShowMainMystery();
             return;
         }
 
         List<string> allQuests = new();
-        allQuests.AddRange(MainManager.mainManager.quests);
-        allQuests.AddRange(MainManager.mainManager.completedQuests);
+        foreach (string q in MainManager.mainManager.completedQuests)
+            if (!allQuests.Contains(q)) allQuests.Add(q);
+        foreach (string q in MainManager.mainManager.quests)
+            if (!allQuests.Contains(q)) allQuests.Add(q);
 
         int questIndex = index - 1;
+        Debug.Log("Quest index: " + questIndex + " total: " + allQuests.Count);
         if (questIndex < allQuests.Count)
         {
             selectedQuestId = allQuests[questIndex];
+            Debug.Log("Showing detail for: " + selectedQuestId);
             ShowQuestDetail(selectedQuestId);
         }
     }
@@ -176,5 +192,7 @@ public class JournalManager : MonoBehaviour
         if (complete) sb.AppendLine("\n<color=green>✓ Completed</color>");
 
         detailText.text = sb.ToString();
+        Debug.Log("DetailText set to: " + detailText.text);
+        Debug.Log("DetailText object active: " + detailText.gameObject.activeInHierarchy);
     }
 }

@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
-  m_Name: MainMystery
+  m_Name: BringPatronCatDrink
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: main
-  displayName: Find Out What Happened to Fluffy
-  activeDescription: 
-  completedDescription: 
+  questId: patron_quest
+  displayName: Bring Patron Cat a Drink
+  activeDescription: Patron Cat will give you information in exchange for a drink
+  completedDescription: 'You brought Patron Cat a drink. He told you that while he
+    didn''t see Fluffy very much, he did catch him snooping around and talking to
+    the musician a lot. '

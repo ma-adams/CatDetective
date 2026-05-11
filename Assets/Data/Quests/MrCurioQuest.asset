@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
-  m_Name: MainMystery
+  m_Name: MrCurioQuest
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questId: main
-  displayName: Find Out What Happened to Fluffy
-  activeDescription: 
-  completedDescription: 
+  questId: next_level
+  displayName: Wait for Your Room to Be Ready
+  activeDescription: 'Your room isn''t ready yet. In the meantime, see if you can
+    do some investigating. '
+  completedDescription: 'You''re room is ready! Pick up your key at reception and
+    head to the elevator. '

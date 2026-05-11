@@ -48,6 +48,7 @@ public class MainManager : MonoBehaviour
         if (!quests.Contains(questId))
         {
             quests.Add(questId);
+            Debug.Log("AddQuest called on instance: " + GetInstanceID() + " questId: " + questId);
             onQuestsChanged?.Invoke();
         }
     }

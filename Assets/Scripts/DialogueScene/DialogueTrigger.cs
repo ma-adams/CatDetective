@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
             Debug.LogWarning("No dialogue branch found for: " + gameObject.name);
             return;
         }
-        FindFirstObjectByType<DialogueManager>().StartDialogue(GetDialogueBranch(), this);
+        FindFirstObjectByType<DialogueManager>().StartDialogue(toPlay, this);
     }
 
     private Dialogue GetDialogueBranch() {

@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d5018f37bc64bb585777cfb240f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestCatalyst
-  quest: 'You added a quest! (must be exactly the same) '
+  questId: 
   notification: {fileID: 0}
 --- !u!1 &3268752347652688001
 GameObject:
@@ -1093,7 +1093,7 @@ RectTransform:
   m_Father: {fileID: 885079325292680022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d5018f37bc64bb585777cfb240f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestCatalyst
-  quest: 'You added a quest! (must be exactly the same) '
+  questId: 
   notification: {fileID: 0}
 --- !u!1 &6144083891183339143
 GameObject:
@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6472351155315552986}
   m_HandleRect: {fileID: 4855153256973600112}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2779,7 +2779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4300093431129659184
 RectTransform:
   m_ObjectHideFlags: 0
