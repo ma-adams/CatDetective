@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
@@ -57,5 +58,17 @@ public class MainManager : MonoBehaviour
     public void AddItem(string itemId) { if (!inventory.Contains(itemId)) inventory.Add(itemId); }
     public void RemoveItem(string itemId) => inventory.Remove(itemId);
 
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public bool AllQuestsComplete(string[] questIds)
+    {
+        foreach (string id in questIds)
+            if (!completedQuests.Contains(id))
+                return false;
+        return true;
+    }
     //trying to make it reload
 }
