@@ -9450,7 +9450,7 @@ Transform:
   m_GameObject: {fileID: 1020835788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.1368684e-13, z: 0.0000019073486}
+  m_LocalPosition: {x: 0, y: -0.001, z: 0.0000019073486}
   m_LocalScale: {x: 2.0999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19400,6 +19400,7 @@ MonoBehaviour:
   mainMysteryDescription: Something strange happened tonight...
   journalPanel: {fileID: 1584108615}
   notification: {fileID: 0}
+  screenFillFraction: 0.95
 --- !u!1001 &1586963293
 PrefabInstance:
   m_ObjectHideFlags: 0
