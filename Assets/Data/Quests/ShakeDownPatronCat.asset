@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
+  m_Name: ShakeDownPatronCat
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: bar_quest
+  displayName: Help Out the Bartender
+  activeDescription: The bartender is super grumpy. If you helped him clear an outstanding
+    tab, he might cheer up enough to give you some information.
+  completedDescription: You shook down the patron cat and got him to pay his tab.
+    You found out that Bartender Cat doesn't like Fluffy. He also told you that this
+    wasn't Fluffy's first stay at the Cat Nap. "Why would a famous journalist stay
+    here when there are way nicer places in the area?"

@@ -254,6 +254,30 @@ MonoBehaviour:
     - There are three clickable drinks in front of you
     - Pick up all of them
     - There are three of them
+    startQuestId: 
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  questId: 
 --- !u!1 &1121812739032445297
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +399,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 6fa70f8ff52314926a2bbd22af6b548e, type: 3}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1

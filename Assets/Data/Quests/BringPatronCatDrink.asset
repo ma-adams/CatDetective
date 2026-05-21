@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
+  m_Name: BringPatronCatDrink
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: patron_quest
+  displayName: Bring Patron Cat a Drink
+  activeDescription: Patron Cat will give you information in exchange for a drink
+  completedDescription: 'You brought Patron Cat a drink. He told you that while he
+    didn''t see Fluffy very much, he did catch him snooping around and talking to
+    the musician a lot. '
