@@ -42,11 +42,55 @@ public class JournalManager : MonoBehaviour
                 btn.onClick.AddListener(() => OnQuestButtonClicked(index));
             else
                 Debug.LogWarning("No Button component on quest button: " + i);
+
+            // Strip the button background so the entry reads as a plain text line
+            Image bg = questButtons[i].GetComponent<Image>();
+            if (bg != null) bg.enabled = false;
         }
 
+        // Configure labels: wrap long text, auto-shrink if needed, ellipsis as last resort
+        foreach (TMP_Text label in questButtonLabels)
+        {
+            if (label == null) continue;
+            label.enableWordWrapping = true;
+            label.overflowMode = TextOverflowModes.Ellipsis;
+            label.enableAutoSizing = true;
+            label.fontSizeMin = 14f;
+            label.fontSizeMax = 36f;
+            label.color = Color.black;
+        }
+
+        ConfigureDetailText();
         RefreshButtons();
         ShowMainMystery();
     }
+
+    private void ConfigureDetailText()
+    {
+        if (detailText == null) return;
+
+        // Let the text grow as tall as it needs
+        detailText.horizontalOverflow = HorizontalWrapMode.Wrap;
+        detailText.verticalOverflow = VerticalWrapMode.Overflow;
+
+        // ScrollRect needs content height > viewport height to scroll.
+        // ContentSizeFitter on the content makes it grow with the text.
+        ContentSizeFitter fitter = detailText.GetComponent<ContentSizeFitter>();
+        if (fitter == null) fitter = detailText.gameObject.AddComponent<ContentSizeFitter>();
+        fitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
+        fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+        // Content anchors must be top-aligned so it expands downward as text grows.
+        RectTransform rt = detailText.rectTransform;
+        rt.anchorMin = new Vector2(0.5f, 1f);
+        rt.anchorMax = new Vector2(0.5f, 1f);
+        rt.pivot = new Vector2(1f, 1f);
+    }
+
+    [Header("Sizing")]
+    [Tooltip("Fraction of the screen height the journal should occupy when opened.")]
+    [Range(0.5f, 1f)]
+    public float screenFillFraction = 0.95f;
 
     public void ToggleJournal()
     {
@@ -57,6 +101,7 @@ public class JournalManager : MonoBehaviour
         {
             isOpen = true;
             if (notification != null) notification.SetActive(false);
+            FitToScreen();
             RefreshButtons();      // always refresh on open
             ShowMainMystery();     // always reset to main page on open
         }
@@ -70,7 +115,7 @@ public class JournalManager : MonoBehaviour
     {
         Debug.Log("OnQuestsChanged fired, panel active: " + journalPanel.activeSelf);
         if (notification != null) notification.SetActive(true);
-        
+
         if (journalPanel.activeSelf)
         {
             RefreshButtons();
@@ -141,6 +186,27 @@ public class JournalManager : MonoBehaviour
             Debug.Log("Showing detail for: " + selectedQuestId);
             ShowQuestDetail(selectedQuestId);
         }
+    }
+
+    private void FitToScreen()
+    {
+        RectTransform panelRt = journalPanel.GetComponent<RectTransform>();
+        if (panelRt == null) return;
+
+        Canvas canvas = journalPanel.GetComponentInParent<Canvas>();
+        if (canvas == null) return;
+
+        RectTransform canvasRt = canvas.GetComponent<RectTransform>();
+        if (canvasRt == null) return;
+
+        Vector2 panelSize = panelRt.rect.size;
+        Vector2 canvasSize = canvasRt.rect.size;
+        if (panelSize.x <= 0 || panelSize.y <= 0) return;
+
+        float scaleX = (canvasSize.x * screenFillFraction) / panelSize.x;
+        float scaleY = (canvasSize.y * screenFillFraction) / panelSize.y;
+        float scale = Mathf.Min(scaleX, scaleY, 1f);
+        panelRt.localScale = new Vector3(scale, scale, 1f);
     }
 
     private void ShowMainMystery()
