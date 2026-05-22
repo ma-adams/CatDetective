@@ -7,7 +7,7 @@ public class InteractionManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame || DialogueManager.IsOpen)
             return;
 
         Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius);
