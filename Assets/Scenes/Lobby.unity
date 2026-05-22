@@ -3030,7 +3030,8 @@ MonoBehaviour:
   player: {fileID: 0}
   npc: {fileID: 0}
   detectionRadius: 1
-  itemId: 
+  itemId: Cardboard Box A
+  requiredQuestId: bellhop_quest
 --- !u!65 &211189630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5896,6 +5897,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: moneyRoll
+  requiredQuestId: bar_quest
 --- !u!65 &521920770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12298,6 +12300,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Cardboard Box B
+  requiredQuestId: bellhop_quest
 --- !u!65 &1181715738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19900,6 +19903,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: CocktailVar3
+  requiredQuestId: patron_quest
 --- !u!65 &1515933841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20953,6 +20957,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Trashbag A (1)
+  requiredQuestId: bellhop_quest
 --- !u!65 &1592738230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21105,6 +21110,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: SM_bracelet
+  requiredQuestId: music_quest
 --- !u!65 &1597338098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21163,6 +21169,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Cardboard Box B (1)
+  requiredQuestId: bellhop_quest
 --- !u!65 &1618985125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23066,6 +23073,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Cardboard Box A (1)
+  requiredQuestId: bellhop_quest
 --- !u!65 &1868188160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23643,6 +23651,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Trashbag A
+  requiredQuestId: bellhop_quest
 --- !u!65 &1898517059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24130,6 +24139,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: key
+  requiredQuestId: 
 --- !u!65 &1928626033
 BoxCollider:
   m_ObjectHideFlags: 0

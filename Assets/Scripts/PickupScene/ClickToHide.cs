@@ -7,7 +7,14 @@ public class ClickToHide : MonoBehaviour
     public Transform npc;
     public float detectionRadius = 3f;
 
-    [SerializeField] private string itemId; 
+    [SerializeField] private string itemId;
+    [SerializeField] private string requiredQuestId;
+
+    public bool IsInteractable()
+    {
+        if (string.IsNullOrEmpty(requiredQuestId)) return true;
+        return MainManager.mainManager != null && MainManager.mainManager.quests.Contains(requiredQuestId);
+    }
 
     void Update()
     {

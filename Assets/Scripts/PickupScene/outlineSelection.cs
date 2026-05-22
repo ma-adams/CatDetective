@@ -35,7 +35,10 @@ public class OutlineSelection : MonoBehaviour
 
             if (isInside)
             {
-                if (outline == null)
+                ClickToHide pickup = obj.GetComponent<ClickToHide>();
+                bool interactable = pickup == null || pickup.IsInteractable();
+
+                if (outline == null && interactable)
                 {
                     outline = obj.gameObject.AddComponent<Outline>();
                     outline.OutlineColor = outlineColor;
@@ -43,7 +46,8 @@ public class OutlineSelection : MonoBehaviour
                     outline.OutlineMode = Outline.Mode.OutlineAll;
                 }
 
-                outline.enabled = true;
+                if (outline != null)
+                    outline.enabled = interactable;
             }
             else
             {
