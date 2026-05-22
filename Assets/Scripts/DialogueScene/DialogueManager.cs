@@ -91,6 +91,18 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
+    public void ForceClose()
+    {
+        if (!isOpen) return;
+        StopAllCoroutines();
+        isTyping = false;
+        currentTrigger = null;
+        currentDialogue = null;
+        isOpen = false;
+        _isOpen = false;
+        animator.SetBool("isOpen", false);
+    }
+
     void EndDialogue()
     {
     isOpen = false;

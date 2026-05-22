@@ -33,6 +33,8 @@ public class NPCProximity : MonoBehaviour
             {
                 isPlayerNearby = false;
                 interactPrompt.SetActive(false);
+                if (DialogueManager.IsOpen)
+                    FindFirstObjectByType<DialogueManager>()?.ForceClose();
             }
         }
         
