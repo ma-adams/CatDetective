@@ -3349,6 +3349,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: CocktailVar3
   requiredItems: []
+  requiredCompletedQuests: []
   questId: patron_quest
 --- !u!1001 &237624979
 PrefabInstance:
@@ -11703,6 +11704,7 @@ MonoBehaviour:
   - Cardboard Box A (1)
   - Cardboard Box B
   - Cardboard Box B (1)
+  requiredCompletedQuests: []
   questId: bellhop_quest
 --- !u!114 &1095349679
 MonoBehaviour:
@@ -20020,6 +20022,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: moneyRoll
   requiredItems: []
+  requiredCompletedQuests: []
   questId: bar_quest
 --- !u!114 &1519548519
 MonoBehaviour:
@@ -22290,7 +22293,12 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: 
   requiredItems: []
-  questId: 
+  requiredCompletedQuests:
+  - patron_quest
+  - bellhop_quest
+  - bar_quest
+  - music_quest
+  questId: next_level
 --- !u!114 &1781403653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30063,6 +30071,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: SM_bracelet
   requiredItems: []
+  requiredCompletedQuests: []
   questId: music_quest
 --- !u!114 &1995693085
 MonoBehaviour:

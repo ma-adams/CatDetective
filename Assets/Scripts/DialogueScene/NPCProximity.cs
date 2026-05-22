@@ -36,8 +36,8 @@ public class NPCProximity : MonoBehaviour
             }
         }
         
-        if (Keyboard.current.eKey.wasPressedThisFrame && isPlayerNearby) {
-            GetComponent<DialogueTrigger>().TriggerDialogue();
+        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame && isPlayerNearby) {
+            GetComponent<DialogueTrigger>()?.TriggerDialogue();
         }
 
     }
