@@ -25,7 +25,9 @@ public class QuestCatalyst : MonoBehaviour
     {
         if (MainManager.mainManager.quests.Contains(questId))
         {
-            MainManager.mainManager.quests.Remove(questId); //removes quest from main manager's list of quests
+            MainManager.mainManager.quests.Remove(questId);
+            if (!MainManager.mainManager.completedQuests.Contains(questId))
+                MainManager.mainManager.completedQuests.Add(questId);
         }
     }
 }
