@@ -1434,17 +1434,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3413711846715311720, guid: 7695c0d2e92da0e4f8d08c7909230b47, type: 3}
   m_PrefabInstance: {fileID: 704191924}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &196954437 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1476774866283564445, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-  m_PrefabInstance: {fileID: 532680240}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &204189063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1748,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: CocktailVar3
   requiredItems: []
+  requiredCompletedQuests: []
   questId: patron_quest
 --- !u!4 &266077461 stripped
 Transform:
@@ -3801,123 +3791,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3106554150203184529, guid: 9cf94939f3dfab54eb62e181bdc60594, type: 3}
   m_PrefabInstance: {fileID: 1092198846}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &532680240
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 449164006427817983, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_Name
-      value: DialogueCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_Transition
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1964569119}
-    - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 896211970974670523, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnContinueButtonPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043594820846110976, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 590096083207271027, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2819192304593377022, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1964569119}
-  m_SourcePrefab: {fileID: 100100000, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
 --- !u!1001 &555036197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8353,6 +8226,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: hallwayNote
+  requiredQuestId: 
 --- !u!65 &1012572405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9385,6 +9259,7 @@ MonoBehaviour:
   - Cardboard Box A (1)
   - Cardboard Box B
   - Cardboard Box B (1)
+  requiredCompletedQuests: []
   questId: bellhop_quest
 --- !u!114 &1095349679
 MonoBehaviour:
@@ -11037,6 +10912,103 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 421fa57541cb8a345b62b627dc8d65c5, type: 3}
+--- !u!1001 &1268279621
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5514341799810028693, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_Name
+      value: DialogueCanvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418756901973436807, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa43d6399580243fbb5a075507bfcd04, type: 3}
 --- !u!1001 &1274828703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11490,6 +11462,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: fluffyKey
+  requiredQuestId: 
 --- !u!65 &1329817095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17355,6 +17328,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: masterKey
+  requiredQuestId: 
 --- !u!65 &1446644818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18102,6 +18076,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: moneyRoll
   requiredItems: []
+  requiredCompletedQuests: []
   questId: bar_quest
 --- !u!114 &1519548519
 MonoBehaviour:
@@ -18603,6 +18578,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: curioBook2
+  requiredQuestId: 
 --- !u!65 &1581496527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18785,6 +18761,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: curioBook
+  requiredQuestId: 
 --- !u!65 &1606538583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20336,6 +20313,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: 
   requiredItems: []
+  requiredCompletedQuests: []
   questId: 
 --- !u!114 &1781403653
 MonoBehaviour:
@@ -20737,6 +20715,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: creepyNote
+  requiredQuestId: 
 --- !u!65 &1867071523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21176,6 +21155,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: curioBook3
+  requiredQuestId: 
 --- !u!65 &1925154837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21477,6 +21457,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: fluffyNotes
+  requiredQuestId: 
 --- !u!65 &1955587547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21498,30 +21479,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1964569114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2819192304593377022, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-  m_PrefabInstance: {fileID: 532680240}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1964569116 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5921369750404992448, guid: 193bd9d4f5d3d483e8f57941af426a45, type: 3}
-  m_PrefabInstance: {fileID: 532680240}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1964569119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964569114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa70f8ff52314926a2bbd22af6b548e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  dialogueText: {fileID: 196954437}
-  animator: {fileID: 1964569116}
 --- !u!1001 &1972359726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26689,6 +26646,7 @@ MonoBehaviour:
     fallbackDialogue: 
   requiredItem: SM_bracelet
   requiredItems: []
+  requiredCompletedQuests: []
   questId: music_quest
 --- !u!114 &1995693085
 MonoBehaviour:
@@ -32216,6 +32174,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: fluffyCase
+  requiredQuestId: 
 --- !u!65 &2137679562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32413,7 +32372,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 532680240}
+  - {fileID: 1268279621}
   - {fileID: 2006636036}
   - {fileID: 1136304964}
   - {fileID: 36306272}
