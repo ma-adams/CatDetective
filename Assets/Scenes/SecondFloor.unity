@@ -1720,6 +1720,7 @@ MonoBehaviour:
     - Woof... what a night
     - I need a drink!
     startQuestId: patron_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -1727,6 +1728,7 @@ MonoBehaviour:
     sentences:
     - I could really use a drink...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -1735,6 +1737,7 @@ MonoBehaviour:
     - Hey, thanks for the drink!
     - Ahh this is refreshing!!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: patron_quest
     requiredItem: 
     fallbackDialogue: 
@@ -1743,6 +1746,7 @@ MonoBehaviour:
     - '*Slurrrrrp* Yeah, I didn''t really see Fluffy that much. '
     - '*Buuuurp* But when I did he always seemed shady, snooping around and whatnot. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -1750,6 +1754,24 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: patron_quest
+--- !u!1 &262838360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 1626273498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &262838361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262838360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 0}
 --- !u!4 &266077461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3899058216853828530, guid: 160b04eba86dc49f79494f9162a246c1, type: 3}
@@ -2108,6 +2130,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8754142908855366041, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2137679560}
+    - targetCorrespondingSourceObject: {fileID: 8754142908855366041, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2137679563}
+    - targetCorrespondingSourceObject: {fileID: 8754142908855366041, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2137679564}
   m_SourcePrefab: {fileID: 100100000, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
 --- !u!1001 &292219463
 PrefabInstance:
@@ -2878,66 +2906,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WallSection
   hiddenAlpha: 0.15
   fadeSpeed: 6
---- !u!1 &389406972 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 148731476348925746, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &389406974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3880164213652097256, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389406972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &389406976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389406972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 389406974}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &390055536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,126 +3363,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6205105793449793176, guid: 17ca59b84158a433b97ad920ac5a6f4b, type: 3}
   m_PrefabInstance: {fileID: 463053506}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &490782249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7026609100183824088, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &490782251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1395540437381321932, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490782249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &490782253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490782249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 490782251}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &496533334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6792169876438464604, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &496533336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4259051047227334539, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496533334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &496533338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496533334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 496533336}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &504728220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,6 +3639,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3106554150203184529, guid: 9cf94939f3dfab54eb62e181bdc60594, type: 3}
   m_PrefabInstance: {fileID: 1092198846}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &554334056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 1056801175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &554334063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554334056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - You knock on the door. No one appears to be home.
+    - Maybe there's a key nearby.
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - You knock on the door. No one appears to be home.
+    - Maybe there's a key nearby.
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences:
+    - 'One of the keys from Mr. Fluffy''s keychain fits. You push the door open. '
+    startQuestId: open_locked_case
+    startQuestIds: []
+    completeQuestId: search_fluffys_room
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests:
+  - find_small_key
+  questId: search_fluffys_room
+--- !u!114 &554334064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554334056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
+  unlockedByQuest: search_fluffys_room
+  barrierObjects: []
+--- !u!114 &554334066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554334056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 0525f0393405d4518aa3ca9b4f20ed30, type: 2}
 --- !u!1001 &555036197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4045,6 +3975,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1606538581}
+    - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1606538584}
   m_SourcePrefab: {fileID: 100100000, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
 --- !u!4 &568648215 stripped
 Transform:
@@ -5058,6 +4991,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3413711846715311720, guid: 7695c0d2e92da0e4f8d08c7909230b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1955587545}
+    - targetCorrespondingSourceObject: {fileID: 3413711846715311720, guid: 7695c0d2e92da0e4f8d08c7909230b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1955587548}
   m_SourcePrefab: {fileID: 100100000, guid: 7695c0d2e92da0e4f8d08c7909230b47, type: 3}
 --- !u!1001 &726250567
 PrefabInstance:
@@ -5128,6 +5064,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1581496525}
+    - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1581496528}
+    - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1581496529}
+    - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1581496530}
   m_SourcePrefab: {fileID: 100100000, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
 --- !u!4 &726250568 stripped
 Transform:
@@ -5279,66 +5224,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
---- !u!1 &740127471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6936676189860214909, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &740127473 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7169418391823518561, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740127471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &740127475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740127471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 740127473}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &760440516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5737,17 +5622,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4651603642805868, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
   m_PrefabInstance: {fileID: 785059491}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &785273986 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7648779294783089894, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &816887967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5956,28 +5830,6 @@ Transform:
   - {fileID: 1457836269}
   m_Father: {fileID: 1725591518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &826921769 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2044726548271376094, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
---- !u!114 &832677695 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7411143697240479145, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &840719496
 GameObject:
   m_ObjectHideFlags: 0
@@ -6284,6 +6136,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6439960611134410318, guid: 421fa57541cb8a345b62b627dc8d65c5, type: 3}
   m_PrefabInstance: {fileID: 844413454}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &847958863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 131714675241382711, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_Name
+      value: JournalCanvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819357025403054776, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11d271420f14c4ab2b469a4f0bd11490, type: 3}
 --- !u!4 &858734816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439960611134410318, guid: 421fa57541cb8a345b62b627dc8d65c5, type: 3}
@@ -6614,17 +6563,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2068398726653781473, guid: e0a309163f5d1ef4e81367371dba0804, type: 3}
   m_PrefabInstance: {fileID: 874376312}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &884224936 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6022793294954336388, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &886543912
 GameObject:
   m_ObjectHideFlags: 0
@@ -8395,66 +8333,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020835788}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1025852990 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4254962814680579946, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1025852992 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8281202205140684636, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025852990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &1025852994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025852990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1025852992}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1030992162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8575,7 +8453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8584,6 +8462,10 @@ PrefabInstance:
     - target: {fileID: 1277515215171538, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      propertyPath: m_TagString
+      value: selectable
       objectReference: {fileID: 0}
     - target: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8668,7 +8550,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 554334063}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 554334064}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 554334066}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!4 &1056801176 stripped
 Transform:
@@ -9218,47 +9109,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - Hey there! Welcome to the Cat Nap!
-    - 'Sorry for the wait, we''re shortstaffed. '
-    - Heck, I'm doing like three cats-worth of work!
-    - I'm in over my head. Could you help me clean up the lobby?
-    startQuestId: bellhop_quest
+    - 'Detective! I''ve got your room all ready. It''s right through here! '
+    - Make yourself cozy!
+    startQuestId: read_creepy_note
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   questDialogue:
-    sentences:
-    - The sooner I get this place cleaned up, the sooner I get your room ready...
+    sentences: []
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   rewardDialogue:
-    sentences:
-    - Thank you so much!! I feel so relieved!
-    - 'Hey, just so you know, since you''re a detective, Fluffy was real interested
-      in the laundry chute. '
-    - I don't know, maybe his next story was about hotel laundry practices?
-    - 'I didn''t see anything last night either. My room is in the basement. '
-    - 'Mr. Curio did wake me up to turn the power back on though. '
+    sentences: []
     startQuestId: 
-    completeQuestId: bellhop_quest
+    startQuestIds: []
+    completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   completedDialogue:
-    sentences:
-    - I'll get started on your room right away!
+    sentences: []
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
-  requiredItems:
-  - Trashbag A (1)
-  - Trashbag A
-  - Cardboard Box A (1)
-  - Cardboard Box B
-  - Cardboard Box B (1)
+  requiredItems: []
   requiredCompletedQuests: []
   questId: bellhop_quest
 --- !u!114 &1095349679
@@ -9570,17 +9450,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3204423859770501514, guid: 3713613c4ffcd6945900432c53af79b8, type: 3}
   m_PrefabInstance: {fileID: 1139874610}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1140591569 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8813092512360519778, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1142552385
 GameObject:
   m_ObjectHideFlags: 0
@@ -9755,17 +9624,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1577961378138340510, guid: c02a39b7e9c2d2b448d9f082927bb50d, type: 3}
   m_PrefabInstance: {fileID: 1157456295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1158022664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3330213697172601669, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1166669275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10049,7 +9907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10142,68 +10000,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751022274}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751022276}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
---- !u!1 &1196260100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1212424668254333589, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1196260102 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7133654333792887720, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196260100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &1196260104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196260100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1196260102}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1202426037
 GameObject:
   m_ObjectHideFlags: 0
@@ -10464,66 +10268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WallSection
   hiddenAlpha: 0.15
   fadeSpeed: 6
---- !u!1 &1210148177 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4670749336778636537, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1210148179 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8952899331190384847, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210148177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &1210148181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210148177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1210148179}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1210303840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11424,6 +11168,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4519459164685028009, guid: 7c192d7eb2f177148a065545bab91a28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1329817093}
+    - targetCorrespondingSourceObject: {fileID: 4519459164685028009, guid: 7c192d7eb2f177148a065545bab91a28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329817098}
+    - targetCorrespondingSourceObject: {fileID: 4519459164685028009, guid: 7c192d7eb2f177148a065545bab91a28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329817099}
+    - targetCorrespondingSourceObject: {fileID: 4519459164685028009, guid: 7c192d7eb2f177148a065545bab91a28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329817100}
   m_SourcePrefab: {fileID: 100100000, guid: 7c192d7eb2f177148a065545bab91a28, type: 3}
 --- !u!4 &1329817092 stripped
 Transform:
@@ -11484,6 +11237,79 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07542583, y: 0.0035711746, z: 0.030737206}
   m_Center: {x: -0.011536395, y: -0.0000024553156, z: -0.00017077739}
+--- !u!114 &1329817098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202956229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bddabd948f54996af6dae5cd352a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
+  itemId: small_key
+  requiredCompletedQuests:
+  - read_creepy_note
+--- !u!114 &1329817099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202956229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: search_fluffys_room
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences:
+    - 'This is Fluffy''s keychain. '
+    startQuestId: search_fluffys_room
+    startQuestIds: []
+    completeQuestId: find_small_key
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: find_small_key
+--- !u!114 &1329817100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202956229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: a3258a33411c04345ae9ff449b852fb0, type: 2}
 --- !u!1 &1330453105
 GameObject:
   m_ObjectHideFlags: 0
@@ -17131,6 +16957,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3643333674795363868, guid: 067fb86e8e4f5744a82f28c508805f86, type: 3}
   m_PrefabInstance: {fileID: 1432024583}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1437197329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 523270632907252915, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
+  m_PrefabInstance: {fileID: 1665206336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1440202056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17290,6 +17121,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baf32c4001660c5408acda3083f5889e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1446644816}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baf32c4001660c5408acda3083f5889e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1446644821}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baf32c4001660c5408acda3083f5889e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1446644822}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baf32c4001660c5408acda3083f5889e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1446644823}
   m_SourcePrefab: {fileID: 100100000, guid: baf32c4001660c5408acda3083f5889e, type: 3}
 --- !u!4 &1446644815 stripped
 Transform:
@@ -17350,6 +17190,79 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06991616, y: 0.0012557412, z: 0.029484767}
   m_Center: {x: -0.0078107305, y: -0.000003381574, z: -0.0002207798}
+--- !u!114 &1446644821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677021462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bddabd948f54996af6dae5cd352a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
+  itemId: curios_master_key
+  requiredCompletedQuests:
+  - open_locked_case
+--- !u!114 &1446644822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677021462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: search_curios_room
+    startQuestIds: []
+    completeQuestId: search_bar_room
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems:
+  - curios_master_key
+  requiredCompletedQuests: []
+  questId: search_bar_room
+--- !u!114 &1446644823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677021462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1, type: 2}
 --- !u!1001 &1452061475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17731,17 +17644,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2743037689681575029, guid: a2e6444451e398844bfa41ba8f0ebfb2, type: 3}
   m_PrefabInstance: {fileID: 319661114}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1497015883 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7502422673310179953, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1506733669
 GameObject:
   m_ObjectHideFlags: 0
@@ -18044,6 +17946,7 @@ MonoBehaviour:
       cash. It's sitting out over there!
     - 'You "help" him pay his tab, and I''ll tell you what I know. '
     startQuestId: bar_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -18051,6 +17954,7 @@ MonoBehaviour:
     sentences:
     - Patron still owes me...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -18064,6 +17968,7 @@ MonoBehaviour:
     - 'Yeah. This isn''t his first stay. He comes through every once in a while. '
     - 'That''s all I know. I didn''t see anything last night. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: bar_quest
     requiredItem: 
     fallbackDialogue: 
@@ -18071,6 +17976,7 @@ MonoBehaviour:
     sentences:
     - 'I''ve already told you everything I know. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -18600,48 +18506,78 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1584108615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047577392172909659, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1584108619
+--- !u!114 &1581496528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584108615}
+  m_GameObject: {fileID: 1581496524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607728bf47e7740b5ac4bca466a1a88c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JournalManager
-  buttonContainer: {fileID: 0}
-  questButtons:
-  - {fileID: 1210148177}
-  - {fileID: 740127471}
-  - {fileID: 389406972}
-  - {fileID: 490782249}
-  - {fileID: 2144916294}
-  - {fileID: 496533334}
-  - {fileID: 1025852990}
-  - {fileID: 1196260100}
-  questButtonLabels:
-  - {fileID: 1890273722}
-  - {fileID: 884224936}
-  - {fileID: 785273986}
-  - {fileID: 1140591569}
-  - {fileID: 1759214807}
-  - {fileID: 832677695}
-  - {fileID: 1158022664}
-  - {fileID: 1497015883}
-  detailText: {fileID: 826921769}
-  mainMysteryTitle: The Mystery of Fluffy
-  mainMysteryDescription: Something strange happened tonight...
-  journalPanel: {fileID: 1584108615}
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - records about smuggling cheese
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
+--- !u!114 &1581496529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581496524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d5018f37bc64bb585777cfb240f8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestCatalyst
+  questId: solve_the_chute
   notification: {fileID: 0}
-  screenFillFraction: 0.95
+--- !u!114 &1581496530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581496524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2, type: 2}
 --- !u!1001 &1586477504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18783,6 +18719,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1606538584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606538580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - records about finances
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!1001 &1612332081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19033,7 +19014,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 262838361}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1001 &1640637268
 PrefabInstance:
@@ -19261,7 +19245,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 523270632907252915, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883085936}
+    - targetCorrespondingSourceObject: {fileID: 523270632907252915, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883085935}
+    - targetCorrespondingSourceObject: {fileID: 523270632907252915, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883085937}
   m_SourcePrefab: {fileID: 100100000, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
 --- !u!1 &1678598128
 GameObject:
@@ -19604,6 +19597,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1925154835}
+    - targetCorrespondingSourceObject: {fileID: 7795102498530785269, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1925154838}
   m_SourcePrefab: {fileID: 100100000, guid: c2f17a2926fbc774d990dd6e286d4fad, type: 3}
 --- !u!4 &1698439550 stripped
 Transform:
@@ -20191,17 +20187,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4027520509487953459, guid: 91c8c6751f26bcc4a9425c9fc23fd227, type: 3}
   m_PrefabInstance: {fileID: 1750553510}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1759214807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7252521068042013235, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
+--- !u!1 &1751022267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 1187787593}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1751022274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751022267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: talk_to_patrons
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: talk_to_patrons
+--- !u!114 &1751022276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751022267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0, type: 2}
 --- !u!1 &1761116325
 GameObject:
   m_ObjectHideFlags: 0
@@ -20280,20 +20327,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - Welcome to the Cat Nap!
-    - Thank you for coming in to investigate. Your room is almost ready. In the meantime,
-      enjoy the lobby!!
-    - 'It sure is a shame about Mr. Fluffy''s disappearance. We discovered his room
-      was thrashed during turn-down service. '
-    - 'He was a very kind patron. He''s stayed with us a couple times. '
-    startQuestId: next_level
+    - Oh, hell again! Are you enjoying your stay?
+    - I seem to have misplaced my master key. I don't know where it could have gone!
+    startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   questDialogue:
     sentences:
-    - 'I''m afraid your room still isn''t ready yet. '
+    - It would be very bad if that key fell inot the wrong hands...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -20301,6 +20346,7 @@ MonoBehaviour:
     sentences:
     - 'Your room is ready! Head on over to the elevators after picking up your key. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: next_level
     requiredItem: 
     fallbackDialogue: 
@@ -20308,6 +20354,7 @@ MonoBehaviour:
     sentences:
     - 'Your room is ready! Head on over to the elevators after picking up your key. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -20668,10 +20715,13 @@ PrefabInstance:
       addedObject: {fileID: 1867071523}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb35e30754ded1b458a77799176309ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1867071522}
+      addedObject: {fileID: 1867071521}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb35e30754ded1b458a77799176309ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1867071521}
+      addedObject: {fileID: 1867071527}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb35e30754ded1b458a77799176309ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1867071528}
   m_SourcePrefab: {fileID: 100100000, guid: bb35e30754ded1b458a77799176309ad, type: 3}
 --- !u!4 &1867071519 stripped
 Transform:
@@ -20699,23 +20749,6 @@ MonoBehaviour:
   npc: {fileID: 1867071519}
   detectionRadius: 3
   interactPrompt: {fileID: 0}
---- !u!114 &1867071522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867071520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
-  player: {fileID: 0}
-  npc: {fileID: 0}
-  detectionRadius: 1
-  itemId: creepyNote
-  requiredQuestId: 
 --- !u!65 &1867071523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20737,11 +20770,157 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.10766475, y: 0.2317436, z: 0.16271175}
   m_Center: {x: -0.087831885, y: 0.02183056, z: -0.008384498}
+--- !u!114 &1867071527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867071520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - '[PLACEHOLDER] This is what the creepy note says. Scary!'
+    startQuestId: find_small_key
+    startQuestIds: []
+    completeQuestId: read_creepy_note
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - '[PLACEHOLDER] This is what the creepy note says. Scary!'
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences:
+    - '[PLACEHOLDER] This is what the creepy note says. Scary!'
+    startQuestId: find_small_key
+    startQuestIds: []
+    completeQuestId: read_creepy_note
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences:
+    - '[PLACEHOLDER] This is what the creepy note says. Scary!'
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: read_creepy_note
+--- !u!114 &1867071528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867071520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: bd0fa9b819f7f496a82c9019a5c0a7d2, type: 2}
 --- !u!4 &1883085931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 867179816542338569, guid: 90128d4c28d314d438e6f628dae06392, type: 3}
   m_PrefabInstance: {fileID: 1665206336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1883085935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437197329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - this laundry chute looks suspicious
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: solve_the_chute
+--- !u!114 &1883085936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437197329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaundryChutePuzzle
+  questId: solve_the_chute
+  requiredCompletedQuests:
+  - search_curios_room
+  - talk_to_patrons
+  nextScene: Lobby
+  quizPanel: {fileID: 0}
+  questionText: {fileID: 0}
+  answerButtons: []
+  answerTexts: []
+  correctAnswerIndex: 0
+  question: 
+  answers: []
+  wrongAnswerText: 
+  wrongAnswerPanel: {fileID: 0}
+  wrongAnswerFeedbackText: {fileID: 0}
+--- !u!114 &1883085937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437197329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3, type: 2}
 --- !u!1001 &1886617787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20898,17 +21077,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1890273722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 465804006879719873, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1892572519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21177,6 +21345,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1925154838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925154834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - records about crime
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!1 &1931443555
 GameObject:
   m_ObjectHideFlags: 0
@@ -21479,6 +21692,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1955587548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193519318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - 'These notes describe that Fluffy was close to cracking the case. '
+    - 'It says he was in contact with someone on the inside -- someone who wanted
+      out. '
+    startQuestId: open_locked_case
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!1001 &1972359726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26614,6 +26874,7 @@ MonoBehaviour:
     - Say, you're not busy right? Could you help me find my bracelet pleaseeeee?
     - 'Oh, thank you!  '
     startQuestId: music_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -26621,6 +26882,7 @@ MonoBehaviour:
     sentences:
     - I don't know how I'll tell Grammie I lost the family bracelet!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -26634,6 +26896,7 @@ MonoBehaviour:
       I was woken up by yelling coming from Fluffy''s side of the hall. Funnily,
       Bar Cat was nowhere to be found. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: music_quest
     requiredItem: 
     fallbackDialogue: 
@@ -26641,6 +26904,7 @@ MonoBehaviour:
     sentences:
     - Thanks again for finding my bracelet!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -26664,164 +26928,6 @@ MonoBehaviour:
   npc: {fileID: 1995693082}
   detectionRadius: 2
   interactPrompt: {fileID: 935035486}
---- !u!1001 &2006636036
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1827756107416572744, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1584108619}
-    - target: {fileID: 1827756107416572744, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleJournal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1827756107416572744, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: JournalManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2044726548271376094, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_FontData.m_VerticalOverflow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3290923865494401624, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_Name
-      value: JournalCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3290923865494401624, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855153256973600112, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855153256973600112, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047577392172909659, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3043605306516352476, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-    - {fileID: 5035293488293019579, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8047577392172909659, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1584108619}
-    - targetCorrespondingSourceObject: {fileID: 4670749336778636537, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1210148181}
-    - targetCorrespondingSourceObject: {fileID: 6936676189860214909, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 740127475}
-    - targetCorrespondingSourceObject: {fileID: 148731476348925746, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 389406976}
-    - targetCorrespondingSourceObject: {fileID: 7026609100183824088, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 490782253}
-    - targetCorrespondingSourceObject: {fileID: 8923521730203118243, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2144916298}
-    - targetCorrespondingSourceObject: {fileID: 6792169876438464604, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 496533338}
-    - targetCorrespondingSourceObject: {fileID: 4254962814680579946, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1025852994}
-    - targetCorrespondingSourceObject: {fileID: 1212424668254333589, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1196260104}
-  m_SourcePrefab: {fileID: 100100000, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
 --- !u!1 &2011036746
 GameObject:
   m_ObjectHideFlags: 0
@@ -32196,6 +32302,66 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2137679563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364517168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds:
+    - talk_to_patrons
+    - search_bar_room
+    completeQuestId: open_locked_case
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems:
+  - small_key
+  requiredCompletedQuests: []
+  questId: open_locked_case
+--- !u!114 &2137679564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364517168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: d2076bb79828242e58880a607bf552e3, type: 2}
 --- !u!1 &2141049104
 GameObject:
   m_ObjectHideFlags: 0
@@ -32308,72 +32474,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141049104}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2144916294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8923521730203118243, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2144916296 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5891763717325036539, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
-  m_PrefabInstance: {fileID: 2006636036}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144916294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &2144916298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144916294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2144916296}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1268279621}
-  - {fileID: 2006636036}
+  - {fileID: 847958863}
   - {fileID: 1136304964}
   - {fileID: 36306272}
   - {fileID: 1578920472}
