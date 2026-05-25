@@ -7,7 +7,7 @@ public class InteractionManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame || DialogueManager.IsOpen)
             return;
 
         Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius);
@@ -17,8 +17,10 @@ public class InteractionManager : MonoBehaviour
 
         foreach (Collider col in hits)
         {
-            ClickToHide interactable = col.GetComponent<ClickToHide>();
-            if (interactable == null) continue;
+            bool hasInteractable = col.GetComponent<ClickToHide>() != null
+                                || col.GetComponent<ConditionalPickup>() != null
+                                || col.GetComponent<DialogueTrigger>() != null;
+            if (!hasInteractable) continue;
 
             Outline outline = col.GetComponent<Outline>();
             if (outline == null || !outline.enabled) continue;

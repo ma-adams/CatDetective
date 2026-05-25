@@ -4,13 +4,25 @@ using UnityEngine.InputSystem;
 public class ConditionalPickup : MonoBehaviour
 {
     [SerializeField] private string itemId;
-    [SerializeField] private string[] requiredCompletedQuests; // all must be done to appear
+    [SerializeField] private string[] requiredCompletedQuests;
 
     private bool isVisible = false;
+    private Renderer[] renderers;
+    private Collider[] colliders;
 
     void Start()
     {
-        gameObject.SetActive(false); // hidden by default
+        renderers = GetComponentsInChildren<Renderer>();
+        colliders = GetComponentsInChildren<Collider>();
+        SetVisible(false);
+    }
+
+    void SetVisible(bool visible)
+    {
+        foreach (Renderer r in renderers) r.enabled = visible;
+        foreach (Collider c in colliders) c.enabled = visible;
+        Outline outline = GetComponent<Outline>();
+        if (outline != null) outline.enabled = visible;
     }
 
     void Update()
@@ -19,19 +31,9 @@ public class ConditionalPickup : MonoBehaviour
         {
             if (MainManager.mainManager.AllQuestsComplete(requiredCompletedQuests))
             {
-                gameObject.SetActive(true);
+                SetVisible(true);
                 isVisible = true;
                 Debug.Log(itemId + " has appeared!");
-            }
-        }
-
-        if (isVisible && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit))
-            {
-                if (hit.transform == transform && hit.transform.GetComponent<Outline>().enabled)
-                    Pickup();
             }
         }
     }
@@ -40,6 +42,6 @@ public class ConditionalPickup : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(itemId))
             MainManager.mainManager.AddItem(itemId);
-        gameObject.SetActive(false);
+        SetVisible(false);
     }
 }

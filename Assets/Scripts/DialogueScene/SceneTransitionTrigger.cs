@@ -41,7 +41,7 @@ public class SceneTransitionTrigger : MonoBehaviour
         if (Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame) return;
 
         if (MainManager.mainManager.HasItem(requiredItem))
-            Debug.Log("Transitioning to scene: " + nextScene);
+            MainManager.mainManager.LoadScene(nextScene);
         else
             Debug.Log("Door is locked. Find the key first.");
     }
