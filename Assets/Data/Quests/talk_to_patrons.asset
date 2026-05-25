@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: talk_to_patrons
   displayName: Talk to the Patrons
-  activeDescription: Two cats in the patron's room. They might know something.
-  completedDescription: Two cats, mid-argument. Whatever they were fighting about,
-    it had something to do with Fluffy.
+  activeDescription: 'Patron Cat''s room is around here. Let''s try talking to him
+    again. '
+  completedDescription: 'You knocked on Patron Cat''s door. You heard two cats arguing
+    but no one opened the door. '

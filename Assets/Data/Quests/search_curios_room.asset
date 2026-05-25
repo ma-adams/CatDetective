@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: search_curios_room
   displayName: Search Curio's Room
-  activeDescription: The master key fits Curio's room. Find out what he's been hiding.
-  completedDescription: Financial records. Smuggled goods. Everything connects back
-    to Mr. Curio.
+  activeDescription: 'Use the master key to search Mr. Curio''s room. '
+  completedDescription: Financial records. Smuggled goods. Crime?! Everything connects
+    back to Mr. Curio.
