@@ -15,9 +15,10 @@ public class QuestCatalyst : MonoBehaviour
         if (questId != null && !questAdded)
         {
             questAdded = true;
-            MainManager.mainManager.quests.Add(questId); //adds quest to main manager's list of quests
-            if (notification != null)
-                notification.SetActive(true);
+            // Route through AddQuest so onQuestAdded fires (and the start SFX plays).
+            // The journal scripts handle lighting the notification dot via that event,
+            // so we no longer touch `notification` directly here.
+            MainManager.mainManager.AddQuest(questId);
         }
     }
 
@@ -26,8 +27,7 @@ public class QuestCatalyst : MonoBehaviour
         if (MainManager.mainManager.quests.Contains(questId))
         {
             MainManager.mainManager.quests.Remove(questId);
-            if (!MainManager.mainManager.completedQuests.Contains(questId))
-                MainManager.mainManager.completedQuests.Add(questId);
+            MainManager.mainManager.CompleteQuest(questId);
         }
     }
 }

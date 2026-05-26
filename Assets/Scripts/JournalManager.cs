@@ -31,7 +31,10 @@ public class JournalManager : MonoBehaviour
         if (notification != null) notification.SetActive(false);
 
         if (MainManager.mainManager != null)
+        {
             MainManager.mainManager.onQuestsChanged += OnQuestsChanged;
+            MainManager.mainManager.onQuestAdded += OnQuestAdded;
+        }
 
         // Wire up button clicks via Button component
         for (int i = 0; i < questButtons.Length; i++)
@@ -92,30 +95,72 @@ public class JournalManager : MonoBehaviour
     [Range(0.5f, 1f)]
     public float screenFillFraction = 0.95f;
 
+    [Header("Sound")]
+    [Tooltip("AudioSource used to play the open/close SFX. 2D, Loop off, Play On Awake off.")]
+    public AudioSource sfxSource;
+    public AudioClip openSound;
+    [Range(0f, 1f)] public float openVolume = 1f;
+    public AudioClip closeSound;
+    [Range(0f, 1f)] public float closeVolume = 1f;
+
     public void ToggleJournal()
     {
         bool shouldOpen = !journalPanel.activeSelf;
-        journalPanel.SetActive(shouldOpen);
 
         if (shouldOpen)
         {
+            // Activate the panel first so an AudioSource living inside it is enabled before we play.
+            journalPanel.SetActive(true);
+            PlaySfx(openSound, openVolume);
             isOpen = true;
-            if (notification != null) notification.SetActive(false);
             FitToScreen();
             RefreshButtons();      // always refresh on open
             ShowMainMystery();     // always reset to main page on open
         }
         else
         {
+            // Play SFX before deactivating so the AudioSource isn't disabled mid-clip.
+            PlaySfx(closeSound, closeVolume);
+            journalPanel.SetActive(false);
+            // Clear the "new quest" dot now that the player has closed the journal.
+            if (notification != null) notification.SetActive(false);
             isOpen = false;
         }
     }
 
+    // SFX always plays from this GameObject (which stays active), not from one that might be
+    // inside journalPanel and get disabled mid-clip. Mixer routing is inherited from sfxSource
+    // so the user's Audio Mixer setup is preserved.
+    private AudioSource _sfx;
+
+    private void EnsureSfx()
+    {
+        if (_sfx != null) return;
+        // Create a dedicated GameObject at scene root (parent = null) so this AudioSource
+        // is independent of journalPanel's active state. If the JournalManager lives
+        // inside journalPanel, an AudioSource on it would be killed mid-clip when the
+        // panel deactivates. A root-level GameObject can't be.
+        GameObject go = new GameObject("JournalSFX");
+        _sfx = go.AddComponent<AudioSource>();
+        _sfx.playOnAwake = false;
+        _sfx.loop = false;
+        _sfx.spatialBlend = 0f;
+        if (sfxSource != null && sfxSource.outputAudioMixerGroup != null)
+            _sfx.outputAudioMixerGroup = sfxSource.outputAudioMixerGroup;
+    }
+
+    private void PlaySfx(AudioClip clip, float volume = 1f)
+    {
+        if (clip == null) return;
+        EnsureSfx();
+        _sfx.PlayOneShot(clip, volume);
+    }
+
     private void OnQuestsChanged()
     {
+        // Refresh only — notification is handled by OnQuestAdded so it doesn't relight
+        // when a quest is completed.
         Debug.Log("OnQuestsChanged fired, panel active: " + journalPanel.activeSelf);
-        if (notification != null) notification.SetActive(true);
-
         if (journalPanel.activeSelf)
         {
             RefreshButtons();
@@ -124,6 +169,13 @@ public class JournalManager : MonoBehaviour
             else
                 ShowQuestDetail(selectedQuestId);
         }
+    }
+
+    private void OnQuestAdded()
+    {
+        // Light the notification dot only when a brand-new quest is added.
+        // It's cleared again when the player closes the journal.
+        if (notification != null) notification.SetActive(true);
     }
 
     private void RefreshButtons()

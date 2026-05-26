@@ -15,7 +15,8 @@ public class JournalButtonBehavior : MonoBehaviour {
     {
         if (MainManager.mainManager != null)
         {
-            MainManager.mainManager.onQuestsChanged += ShowNotification;
+            // Only light the notification when a NEW quest is added, not on completion.
+            MainManager.mainManager.onQuestAdded += ShowNotification;
         }
     }
 
