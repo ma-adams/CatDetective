@@ -119,6 +119,11 @@ public class DialogueManager : MonoBehaviour
     if (!string.IsNullOrEmpty(currentDialogue.startQuestId))
         MainManager.mainManager.AddQuest(currentDialogue.startQuestId);
 
+    if (currentDialogue.startQuestIds != null)
+        foreach (string id in currentDialogue.startQuestIds)
+            if (!string.IsNullOrEmpty(id))
+                MainManager.mainManager.AddQuest(id);
+
     if (!string.IsNullOrEmpty(currentDialogue.completeQuestId))
     {
         MainManager.mainManager.quests.Remove(currentDialogue.completeQuestId);

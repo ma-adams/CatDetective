@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
+  m_Name: talk_to_patrons
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: talk_to_patrons
+  displayName: Talk to the Patrons
+  activeDescription: 'Patron Cat''s room is around here. Let''s try talking to him
+    again. '
+  completedDescription: 'You knocked on Patron Cat''s door. You heard two cats arguing
+    but no one opened the door. '
