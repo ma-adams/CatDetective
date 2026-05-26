@@ -12,6 +12,10 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private bool isTyping = false;
+    private bool isOpen = false;
+    private bool justOpened = false;
+    public static bool IsOpen => _isOpen;
+    private static bool _isOpen = false;
     private string currentSentence = "";
     private DialogueTrigger currentTrigger;
     private Dialogue currentDialogue;
@@ -21,10 +25,20 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    void Update()
+    {
+        if (justOpened) { justOpened = false; return; }
+        if (isOpen && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+            OnContinueButtonPressed();
+    }
+
     public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger = null)
     {
         currentTrigger = trigger;
         currentDialogue = dialogue;
+        isOpen = true;
+        _isOpen = true;
+        justOpened = true;
         animator.SetBool("isOpen", true);
         sentences.Clear();
 
@@ -77,8 +91,22 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
-    void EndDialogue() 
+    public void ForceClose()
     {
+        if (!isOpen) return;
+        StopAllCoroutines();
+        isTyping = false;
+        currentTrigger = null;
+        currentDialogue = null;
+        isOpen = false;
+        _isOpen = false;
+        animator.SetBool("isOpen", false);
+    }
+
+    void EndDialogue()
+    {
+    isOpen = false;
+    _isOpen = false;
     animator.SetBool("isOpen", false);
 
     if (currentTrigger == null || currentDialogue == null) return;

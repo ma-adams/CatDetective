@@ -10,6 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue completedDialogue; // after quest is done, ongoing conversation
     public string requiredItem; // item needed to complete the quest
     public string[] requiredItems; // multiple items needed to complete the quest
+    public string[] requiredCompletedQuests; // quests that must be completed before reward dialogue
     public string questId; // quest this NPC is associated with
 
     public void TriggerDialogue()
@@ -32,12 +33,14 @@ public class DialogueTrigger : MonoBehaviour
         bool questActive = !string.IsNullOrEmpty(questId)
                            && MainManager.mainManager.quests.Contains(questId);
         bool hasAllItems = HasRequiredItems();
+        bool hasCompletedPrereqs = HasRequiredCompletedQuests();
 
         if (questComplete && completedDialogue != null) return completedDialogue;
-        if (questActive && hasAllItems && rewardDialogue != null)
-            return rewardDialogue; // player has the item, complete the quest
+        if (questActive && hasAllItems && hasCompletedPrereqs && rewardDialogue != null)
+            return rewardDialogue;
         if (questActive && questDialogue != null)
-            return questDialogue; // quest active but no item yet
+            return questDialogue;
+
         return dialogue;          // first time talking, start the quest
     }
 
@@ -57,5 +60,11 @@ public class DialogueTrigger : MonoBehaviour
             return MainManager.mainManager.HasItem(requiredItem);
 
         return true; // no item required
+    }
+
+    private bool HasRequiredCompletedQuests()
+    {
+        if (requiredCompletedQuests == null || requiredCompletedQuests.Length == 0) return true;
+        return MainManager.mainManager.AllQuestsComplete(requiredCompletedQuests);
     }
 }

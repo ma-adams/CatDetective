@@ -33,11 +33,13 @@ public class NPCProximity : MonoBehaviour
             {
                 isPlayerNearby = false;
                 interactPrompt.SetActive(false);
+                if (DialogueManager.IsOpen)
+                    FindFirstObjectByType<DialogueManager>()?.ForceClose();
             }
         }
         
-        if (Keyboard.current.eKey.wasPressedThisFrame && isPlayerNearby) {
-            GetComponent<DialogueTrigger>().TriggerDialogue();
+        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame && isPlayerNearby && !DialogueManager.IsOpen) {
+            GetComponent<DialogueTrigger>()?.TriggerDialogue();
         }
 
     }
