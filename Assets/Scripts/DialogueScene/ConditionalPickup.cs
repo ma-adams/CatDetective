@@ -5,6 +5,8 @@ public class ConditionalPickup : MonoBehaviour
 {
     [SerializeField] private string itemId;
     [SerializeField] private string[] requiredCompletedQuests;
+    [SerializeField] private string completeQuestId;
+    [SerializeField] private string startQuestId;
 
     private bool isVisible = false;
     private Renderer[] renderers;
@@ -42,6 +44,18 @@ public class ConditionalPickup : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(itemId))
             MainManager.mainManager.AddItem(itemId);
+
+        if (!string.IsNullOrEmpty(completeQuestId))
+        {
+            MainManager.mainManager.quests.Remove(completeQuestId);
+            if (!MainManager.mainManager.completedQuests.Contains(completeQuestId))
+                MainManager.mainManager.completedQuests.Add(completeQuestId);
+            MainManager.mainManager.onQuestsChanged?.Invoke();
+        }
+
+        if (!string.IsNullOrEmpty(startQuestId))
+            MainManager.mainManager.AddQuest(startQuestId);
+
         SetVisible(false);
     }
 }

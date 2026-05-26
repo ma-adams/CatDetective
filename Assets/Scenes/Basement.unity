@@ -1648,6 +1648,9 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Door
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
 --- !u!114 &58939061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,6 +1667,67 @@ MonoBehaviour:
   npc: {fileID: 1229833511}
   detectionRadius: 3
   interactPrompt: {fileID: 0}
+--- !u!114 &58939068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58939058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - 'It''s locked. '
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences:
+    - Locked. But wait. You still have Curio's master key!
+    startQuestId: find_the_jewelry
+    startQuestIds: []
+    completeQuestId: find_fluffy
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests:
+  - break_the_wall
+  questId: find_fluffy
+--- !u!114 &58939069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58939058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
+  unlockedByQuest: find_fluffy
+  barrierObjects: []
 --- !u!4 &61863019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6215541347655311293, guid: d59c9a34d4edbeb46a77b869dfdd0fae, type: 3}
@@ -6763,6 +6827,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 233692728}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229833517}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!4 &233692726 stripped
 Transform:
@@ -13180,6 +13247,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 983852768811226591, guid: 771e3b5d3916dd34aab849a56859e3d6, type: 3}
   m_PrefabInstance: {fileID: 848490526}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &458764058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 506845261}
+    m_Modifications:
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.37150192
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.458
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.7194967
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7191353
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6948701
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 88.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633284100728685142, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: m_Name
+      value: Mr Fluffy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 633284100728685142, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 639326495}
+  m_SourcePrefab: {fileID: 100100000, guid: d559650686bb54380b5ed97049b19948, type: 3}
+--- !u!4 &458764059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 252817461662341356, guid: d559650686bb54380b5ed97049b19948, type: 3}
+  m_PrefabInstance: {fileID: 458764058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &458856756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14368,6 +14500,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1705116762}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705116766}
   m_SourcePrefab: {fileID: 100100000, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
 --- !u!1001 &499052966
 PrefabInstance:
@@ -14550,6 +14685,7 @@ Transform:
   m_Children:
   - {fileID: 819390937}
   - {fileID: 1095349676}
+  - {fileID: 458764059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &507569926
@@ -15130,6 +15266,54 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Suitcase (3)
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &524468734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524468725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - 'Another moldy suitcase. Not Patron Cat''s. '
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!1001 &525249879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18848,6 +19032,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc05ee3ee5dd90e47863e933663f5eba, type: 3}
+--- !u!1 &639326494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 633284100728685142, guid: d559650686bb54380b5ed97049b19948, type: 3}
+  m_PrefabInstance: {fileID: 458764058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &639326495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639326494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 867144873b5ec4fe98f3e8f1a3654a71, type: 2}
 --- !u!4 &640619347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8806188807704439486, guid: c6dae0fffb3dd354f96fd6a86ae27bd2, type: 3}
@@ -23724,6 +23926,54 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Suitcase (2)
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &807399176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807399167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - 'This isn''t Patron Cat''s suitcase. '
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!4 &809189162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 983852768811226591, guid: 771e3b5d3916dd34aab849a56859e3d6, type: 3}
@@ -25850,6 +26100,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 58939060}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58939068}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58939069}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1001 &870624515
 PrefabInstance:
@@ -31332,6 +31588,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1189904b73d88054fa88fa5c364c51f3, type: 3}
+--- !u!1 &1045596600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 233692725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1047935582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32798,47 +33059,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - Hey there! Welcome to the Cat Nap!
-    - 'Sorry for the wait, we''re shortstaffed. '
-    - Heck, I'm doing like three cats-worth of work!
-    - I'm in over my head. Could you help me clean up the lobby?
-    startQuestId: bellhop_quest
+    - bellhop cat is nervous, hints he knows something but won't talk until you've
+      done something for him
+    - It's the end of Patron Cat's stay and I need to bring him his bag.
+    - But it's a mess down here! Can you help me find it?
+    startQuestId: 
+    startQuestIds:
+    - find_the_suitcases
+    - find_fluffy
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   questDialogue:
-    sentences:
-    - The sooner I get this place cleaned up, the sooner I get your room ready...
+    sentences: []
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   rewardDialogue:
-    sentences:
-    - Thank you so much!! I feel so relieved!
-    - 'Hey, just so you know, since you''re a detective, Fluffy was real interested
-      in the laundry chute. '
-    - I don't know, maybe his next story was about hotel laundry practices?
-    - 'I didn''t see anything last night either. My room is in the basement. '
-    - 'Mr. Curio did wake me up to turn the power back on though. '
+    sentences: []
     startQuestId: 
-    completeQuestId: bellhop_quest
+    startQuestIds: []
+    completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   completedDialogue:
-    sentences:
-    - I'll get started on your room right away!
+    sentences: []
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
-  requiredItems:
-  - Trashbag A (1)
-  - Trashbag A
-  - Cardboard Box A (1)
-  - Cardboard Box B
-  - Cardboard Box B (1)
+  requiredItems: []
+  requiredCompletedQuests: []
   questId: bellhop_quest
 --- !u!114 &1095349679
 MonoBehaviour:
@@ -36954,6 +37209,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4221336976199832, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
   m_PrefabInstance: {fileID: 233692725}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229833517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045596600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaundryChutePuzzle
+  questId: solve_the_case
+  requiredCompletedQuests:
+  - find_fluffy
+  - find_the_jewelry
+  - find_the_suitcase
+  - break_the_wall
+  nextScene: 
+  quizPanel: {fileID: 0}
+  questionText: {fileID: 0}
+  answerButtons: []
+  answerTexts: []
+  correctAnswerIndex: 0
+  question: 
+  answers: []
+  wrongAnswerText: 
+  wrongAnswerPanel: {fileID: 0}
+  wrongAnswerFeedbackText: {fileID: 0}
 --- !u!1001 &1231063117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37023,6 +37307,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8201362453138160889, guid: a864ed7f50e87294db4f5cd267bd2f69, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1727733739}
+    - targetCorrespondingSourceObject: {fileID: 8201362453138160889, guid: a864ed7f50e87294db4f5cd267bd2f69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727733744}
+    - targetCorrespondingSourceObject: {fileID: 8201362453138160889, guid: a864ed7f50e87294db4f5cd267bd2f69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727733743}
+    - targetCorrespondingSourceObject: {fileID: 8201362453138160889, guid: a864ed7f50e87294db4f5cd267bd2f69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727733745}
   m_SourcePrefab: {fileID: 100100000, guid: a864ed7f50e87294db4f5cd267bd2f69, type: 3}
 --- !u!1001 &1231080522
 PrefabInstance:
@@ -48068,6 +48361,82 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Suitcase (1)
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &1439464189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439464180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d5018f37bc64bb585777cfb240f8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestCatalyst
+  questId: find_the_suitcases
+  notification: {fileID: 0}
+--- !u!114 &1439464190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439464180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - This is Patron Cat's suitcase!
+    - And it's filled with... CATNIP?!?!
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
+--- !u!114 &1439464191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439464180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 301a52e68758443f2af4a75649353ed8, type: 2}
 --- !u!1001 &1439895094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50734,8 +51103,10 @@ GameObject:
   - component: {fileID: 1528985814}
   - component: {fileID: 1528985813}
   - component: {fileID: 1528985812}
-  - component: {fileID: 1528985816}
   - component: {fileID: 1528985815}
+  - component: {fileID: 1528985817}
+  - component: {fileID: 1528985818}
+  - component: {fileID: 1528985819}
   m_Layer: 0
   m_Name: fakeWall
   m_TagString: selectable
@@ -50852,7 +51223,7 @@ MonoBehaviour:
   npc: {fileID: 1528985811}
   detectionRadius: 1
   interactPrompt: {fileID: 0}
---- !u!114 &1528985816
+--- !u!114 &1528985817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50861,13 +51232,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 1528985810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
-  player: {fileID: 0}
-  npc: {fileID: 0}
-  detectionRadius: 1
-  itemId: fakeWall
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - 'There''s a crack in the wall. Something heavy could break this open. '
+    startQuestId: find_the_shovel
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences:
+    - 'You knock down the wall using the shovel. '
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: break_the_wall
+    requiredItem: shovel
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: shovel
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: find_fluffy
+--- !u!114 &1528985818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528985810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
+  unlockedByQuest: break_the_wall
+  barrierObjects: []
+--- !u!114 &1528985819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528985810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 124df56dd55ba4e2c819d1d14e5734c7, type: 2}
 --- !u!1001 &1529747062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56273,6 +56701,55 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: C
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &1705116766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705116757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences:
+    - 'This suitcase looks like it''s been sitting down here for years. Definitely
+      not Patron Cat''s. '
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
 --- !u!1001 &1708512060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57144,6 +57621,82 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: shovel
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &1727733743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442292564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: break_the_wall
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: 
+--- !u!114 &1727733744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442292564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bddabd948f54996af6dae5cd352a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
+  itemId: shovel
+  requiredCompletedQuests: []
+  completeQuestId: find_the_shovel
+  startQuestId: break_the_wall
+--- !u!114 &1727733745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442292564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 70347b9cf755747e385d6fa31e314db7, type: 2}
 --- !u!1001 &1728479840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57716,6 +58269,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 807399172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 807399176}
   m_SourcePrefab: {fileID: 100100000, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
 --- !u!1 &1743146547 stripped
 GameObject:
@@ -58405,6 +58961,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1439464185}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1439464190}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1439464189}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1439464191}
   m_SourcePrefab: {fileID: 100100000, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
 --- !u!4 &1763900655 stripped
 Transform:
@@ -58474,6 +59039,86 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: SM_necklace_2
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &1769326767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769326758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09f156ea27649c8a89ed219d2e6635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  questDialogue:
+    sentences:
+    - 'This doesn''t belong down here. '
+    - 'You recognize this necklace. You''ve seen music cat wearing something like
+      this. '
+    startQuestId: solve_the_case
+    startQuestIds: []
+    completeQuestId: find_the_jewelry
+    requiredItem: 
+    fallbackDialogue: 
+  rewardDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  completedDialogue:
+    sentences: []
+    startQuestId: 
+    startQuestIds: []
+    completeQuestId: 
+    requiredItem: 
+    fallbackDialogue: 
+  requiredItem: 
+  requiredItems: []
+  requiredCompletedQuests: []
+  questId: find_the_jewelry
+--- !u!114 &1769326768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769326758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bddabd948f54996af6dae5cd352a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
+  itemId: jewelry
+  requiredCompletedQuests:
+  - find_fluffy
+  completeQuestId: 
+  startQuestId: 
+--- !u!114 &1769326771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769326758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fd4bc0a6c69438d995a9e2a0f6a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
+  questData: {fileID: 11400000, guid: 2c7689e69ad234110b26052e2f5bdf54, type: 2}
 --- !u!1001 &1769334720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60188,6 +60833,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 524468730}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 524468734}
   m_SourcePrefab: {fileID: 100100000, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
 --- !u!1001 &1826970949
 PrefabInstance:
@@ -70570,15 +71218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3290923865494401624, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4855153256973600112, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4855153256973600112, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7430132938968043425, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
       propertyPath: m_Pivot.x
@@ -71639,6 +72287,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f703bddddb22141b8cc7877cea4b7f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769326763}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f703bddddb22141b8cc7877cea4b7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769326768}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f703bddddb22141b8cc7877cea4b7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769326767}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f703bddddb22141b8cc7877cea4b7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769326771}
   m_SourcePrefab: {fileID: 100100000, guid: 11f703bddddb22141b8cc7877cea4b7f, type: 3}
 --- !u!1001 &2028677163
 PrefabInstance:
