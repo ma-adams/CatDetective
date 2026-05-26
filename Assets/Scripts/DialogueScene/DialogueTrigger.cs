@@ -41,7 +41,7 @@ public class DialogueTrigger : MonoBehaviour
         if (questActive && questDialogue != null)
             return questDialogue;
 
-        return dialogue;          // first time talking, start the quest
+        return dialogue;
     }
 
     private bool HasRequiredItems()
