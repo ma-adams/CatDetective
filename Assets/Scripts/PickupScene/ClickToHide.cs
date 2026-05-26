@@ -9,6 +9,8 @@ public class ClickToHide : MonoBehaviour
 
     [SerializeField] private string itemId;
     [SerializeField] private string requiredQuestId;
+    [SerializeField] private string completeQuestId;
+    [SerializeField] private string startQuestId;
 
     public bool IsInteractable()
     {
@@ -34,9 +36,20 @@ public class ClickToHide : MonoBehaviour
     }
 
     public void PickUp() {
-        if (!string.IsNullOrEmpty(itemId)) {
+        if (!string.IsNullOrEmpty(itemId))
             MainManager.mainManager.AddItem(itemId);
+
+        if (!string.IsNullOrEmpty(completeQuestId))
+        {
+            MainManager.mainManager.quests.Remove(completeQuestId);
+            if (!MainManager.mainManager.completedQuests.Contains(completeQuestId))
+                MainManager.mainManager.completedQuests.Add(completeQuestId);
+            MainManager.mainManager.onQuestsChanged?.Invoke();
         }
+
+        if (!string.IsNullOrEmpty(startQuestId))
+            MainManager.mainManager.AddQuest(startQuestId);
+
         gameObject.SetActive(false);
     }
 }

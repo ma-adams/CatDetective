@@ -140,6 +140,23 @@ public class JournalManager : MonoBehaviour
         foreach (string q in MainManager.mainManager.quests)
             if (!allQuests.Contains(q)) allQuests.Add(q);
 
+        int slots = questButtons.Length - 1; // slot 0 is Main Mystery
+        while (allQuests.Count > slots)
+        {
+            // drop the oldest completed quest first
+            string removed = null;
+            foreach (string q in allQuests)
+            {
+                if (MainManager.mainManager.completedQuests.Contains(q))
+                {
+                    removed = q;
+                    break;
+                }
+            }
+            if (removed != null) allQuests.Remove(removed);
+            else break; // only active quests left, can't trim further
+        }
+
         Debug.Log("RefreshButtons: total quests = " + allQuests.Count);
         for (int i = 0; i < allQuests.Count; i++)
             Debug.Log("Quest " + i + ": " + allQuests[i]);
@@ -177,6 +194,22 @@ public class JournalManager : MonoBehaviour
             if (!allQuests.Contains(q)) allQuests.Add(q);
         foreach (string q in MainManager.mainManager.quests)
             if (!allQuests.Contains(q)) allQuests.Add(q);
+
+        int slots = questButtons.Length - 1;
+        while (allQuests.Count > slots)
+        {
+            string removed = null;
+            foreach (string q in allQuests)
+            {
+                if (MainManager.mainManager.completedQuests.Contains(q))
+                {
+                    removed = q;
+                    break;
+                }
+            }
+            if (removed != null) allQuests.Remove(removed);
+            else break;
+        }
 
         int questIndex = index - 1;
         Debug.Log("Quest index: " + questIndex + " total: " + allQuests.Count);
