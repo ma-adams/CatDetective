@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488dd6048247a446c842d7eb92514cc7, type: 3}
+  m_Name: settle_in
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questId: settle_in
+  displayName: Settle In
+  activeDescription: 'Bellhop Cat told you your room is ready. Go check it out. '
+  completedDescription: There's a note in your room... What does it say?
