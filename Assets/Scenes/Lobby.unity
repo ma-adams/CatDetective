@@ -3021,6 +3021,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Cardboard Box A
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &211189630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3310,6 +3312,7 @@ MonoBehaviour:
     - Woof... what a night
     - I need a drink!
     startQuestId: patron_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -3317,6 +3320,7 @@ MonoBehaviour:
     sentences:
     - I could really use a drink...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -3325,6 +3329,7 @@ MonoBehaviour:
     - Hey, thanks for the drink!
     - Ahh this is refreshing!!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: patron_quest
     requiredItem: 
     fallbackDialogue: 
@@ -3333,6 +3338,7 @@ MonoBehaviour:
     - '*Slurrrrrp* Yeah, I didn''t really see Fluffy that much. '
     - '*Buuuurp* But when I did he always seemed shady, snooping around and whatnot. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -5160,7 +5166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionTrigger
   requiredItem: key
-  nextScene: MainScene
+  nextScene: SecondFloor
   lockedPrompt: {fileID: 0}
   unlockedPrompt: {fileID: 0}
 --- !u!1 &461157504 stripped
@@ -5888,6 +5894,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: moneyRoll
   requiredQuestId: bar_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &521920770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11540,6 +11548,7 @@ MonoBehaviour:
     - Heck, I'm doing like three cats-worth of work!
     - I'm in over my head. Could you help me clean up the lobby?
     startQuestId: bellhop_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -11547,6 +11556,7 @@ MonoBehaviour:
     sentences:
     - The sooner I get this place cleaned up, the sooner I get your room ready...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -11559,6 +11569,7 @@ MonoBehaviour:
     - 'I didn''t see anything last night either. My room is in the basement. '
     - 'Mr. Curio did wake me up to turn the power back on though. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: bellhop_quest
     requiredItem: 
     fallbackDialogue: 
@@ -11566,6 +11577,7 @@ MonoBehaviour:
     sentences:
     - I'll get started on your room right away!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -12175,6 +12187,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Cardboard Box B
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1181715738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19778,6 +19792,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: CocktailVar3
   requiredQuestId: patron_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1515933841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19862,6 +19878,7 @@ MonoBehaviour:
       cash. It's sitting out over there!
     - 'You "help" him pay his tab, and I''ll tell you what I know. '
     startQuestId: bar_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -19869,6 +19886,7 @@ MonoBehaviour:
     sentences:
     - Patron still owes me...
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -19882,6 +19900,7 @@ MonoBehaviour:
     - 'Yeah. This isn''t his first stay. He comes through every once in a while. '
     - 'That''s all I know. I didn''t see anything last night. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: bar_quest
     requiredItem: 
     fallbackDialogue: 
@@ -19889,6 +19908,7 @@ MonoBehaviour:
     sentences:
     - 'I''ve already told you everything I know. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -20833,6 +20853,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Trashbag A (1)
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1592738230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20986,6 +21008,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: SM_bracelet
   requiredQuestId: music_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1597338098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21045,6 +21069,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Cardboard Box B (1)
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1618985125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22139,6 +22165,7 @@ MonoBehaviour:
       was thrashed during turn-down service. '
     - 'He was a very kind patron. He''s stayed with us a couple times. '
     startQuestId: next_level
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -22146,6 +22173,7 @@ MonoBehaviour:
     sentences:
     - 'I''m afraid your room still isn''t ready yet. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -22153,6 +22181,7 @@ MonoBehaviour:
     sentences:
     - 'Your room is ready! Head on over to the elevators after picking up your key. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: next_level
     requiredItem: 
     fallbackDialogue: 
@@ -22160,6 +22189,7 @@ MonoBehaviour:
     sentences:
     - 'Your room is ready! Head on over to the elevators after picking up your key. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -22954,6 +22984,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Cardboard Box A (1)
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1868188160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23532,6 +23564,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: Trashbag A
   requiredQuestId: bellhop_quest
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1898517059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24020,6 +24054,8 @@ MonoBehaviour:
   detectionRadius: 1
   itemId: key
   requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
 --- !u!65 &1928626033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29660,7 +29696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionTrigger
   requiredItem: key
-  nextScene: MainScene
+  nextScene: SecondFloor
   lockedPrompt: {fileID: 0}
   unlockedPrompt: {fileID: 0}
 --- !u!1 &1993621559
@@ -29887,6 +29923,7 @@ MonoBehaviour:
     - Say, you're not busy right? Could you help me find my bracelet pleaseeeee?
     - 'Oh, thank you!  '
     startQuestId: music_quest
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -29894,6 +29931,7 @@ MonoBehaviour:
     sentences:
     - I don't know how I'll tell Grammie I lost the family bracelet!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
@@ -29907,6 +29945,7 @@ MonoBehaviour:
       I was woken up by yelling coming from Fluffy''s side of the hall. Funnily,
       Bar Cat was nowhere to be found. '
     startQuestId: 
+    startQuestIds: []
     completeQuestId: music_quest
     requiredItem: 
     fallbackDialogue: 
@@ -29914,6 +29953,7 @@ MonoBehaviour:
     sentences:
     - Thanks again for finding my bracelet!
     startQuestId: 
+    startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
