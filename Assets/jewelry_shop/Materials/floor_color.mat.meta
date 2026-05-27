@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 947d41638d9dc4f1f8f5cc0acc94286b
+timeCreated: 1532654078
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 261543
+  packageName: jewelry shop
+  packageVersion: 1.0
+  assetPath: Assets/jewelry_shop/Materials/floor_color.mat
+  uploadId: 815984
