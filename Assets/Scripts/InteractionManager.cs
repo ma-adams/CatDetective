@@ -20,7 +20,8 @@ public class InteractionManager : MonoBehaviour
             bool hasInteractable = col.GetComponent<ClickToHide>() != null
                                 || col.GetComponent<ConditionalPickup>() != null
                                 || col.GetComponent<DialogueTrigger>() != null
-                                || col.GetComponent<LaundryChutePuzzle>() != null;
+                                || col.GetComponent<LaundryChutePuzzle>() != null
+                                || col.GetComponent<QuestCatalyst>() != null;
             if (!hasInteractable) continue;
 
             Outline outline = col.GetComponent<Outline>();
@@ -43,6 +44,7 @@ public class InteractionManager : MonoBehaviour
             closest.GetComponent<DialogueTrigger>()?.TriggerDialogue();
             closest.GetComponent<ConditionalPickup>()?.Pickup();
             closest.GetComponent<ClickToHide>()?.PickUp();
+            closest.GetComponent<QuestCatalyst>()?.completeQuest();
         }
     }
 }
