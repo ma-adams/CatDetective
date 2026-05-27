@@ -13397,6 +13397,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mr Fluffy
       objectReference: {fileID: 0}
+    - target: {fileID: 6335518491486934582, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 113d5534636694048882d4d1e54c9442, type: 2}
+    - target: {fileID: 7300892714868696277, guid: d559650686bb54380b5ed97049b19948, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 113d5534636694048882d4d1e54c9442, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19086,7 +19094,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639326494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
   m_Name: 
@@ -26087,6 +26095,10 @@ PrefabInstance:
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_Name
       value: Door_13_Brown (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_IsActive
@@ -46862,12 +46874,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388431520}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70105743, y: -0.09229573, z: -0.09229579, w: 0.70105743}
-  m_LocalPosition: {x: -0.77, y: 0.57, z: 8.64}
+  m_LocalRotation: {x: -0, y: -0.25881782, z: -0.000000022351742, w: 0.96592623}
+  m_LocalPosition: {x: -0.028977795, y: 1.0700002, z: -0.0077644587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1888471108}
   m_LocalEulerAnglesHint: {x: 75, y: -90, z: -90}
 --- !u!1 &1392454723
 GameObject:
@@ -59153,8 +59165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
   itemId: jewelry
-  requiredCompletedQuests:
-  - find_fluffy
+  requiredCompletedQuests: []
   completeQuestId: find_the_jewelry
   startQuestId: solve_the_case
 --- !u!114 &1769326771
@@ -62740,7 +62751,8 @@ Transform:
   m_LocalPosition: {x: -0.74, y: 0.57, z: 7.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1388431523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 75, y: 90, z: 90}
 --- !u!114 &1890273722 stripped
@@ -80540,7 +80552,6 @@ SceneRoots:
   - {fileID: 36306272}
   - {fileID: 257436378}
   - {fileID: 1578920472}
-  - {fileID: 1388431523}
   - {fileID: 1888471108}
   - {fileID: 1983351600}
   - {fileID: 2033632884}
