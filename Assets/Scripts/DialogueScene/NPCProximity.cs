@@ -26,8 +26,12 @@ public class NPCProximity : MonoBehaviour
             if (!isPlayerNearby)
             {
                 isPlayerNearby = true;
-                interactPrompt.SetActive(true);
             }
+
+            // only show text prompt for pickups if they are interactable
+            ClickToHide pickup = GetComponent<ClickToHide>();
+            bool interactable = pickup == null || pickup.IsInteractable();
+            interactPrompt.SetActive(interactable);
         } else {
             if (isPlayerNearby)
             {

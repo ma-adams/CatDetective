@@ -2173,7 +2173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143518985}
   m_Layer: 0
-  m_Name: doorPairs (1)
+  m_Name: StairDoors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2196,6 +2196,7 @@ Transform:
   - {fileID: 1249092109}
   - {fileID: 232663546}
   - {fileID: 597731830}
+  - {fileID: 779773105}
   m_Father: {fileID: 520492547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &149050318
@@ -2687,6 +2688,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7692636920190884178, guid: c02a999a44edfa048a0420775c83cf3d, type: 3}
   m_PrefabInstance: {fileID: 1100847089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &186387123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 1357928510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &200696536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3031,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &211189630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6580,6 +6587,7 @@ MonoBehaviour:
   requiredQuestId: bar_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &521920770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6626,6 +6634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525878705}
+  - component: {fileID: 525878706}
   m_Layer: 0
   m_Name: doorPairs
   m_TagString: Untagged
@@ -6650,6 +6659,20 @@ Transform:
   - {fileID: 772550557}
   m_Father: {fileID: 520492547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525878706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525878704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7d78fbc1b24db47b08012c075e2f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WallSection
+  hiddenAlpha: 0.15
+  fadeSpeed: 6
 --- !u!1 &535598380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7654,6 +7677,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4651603642805868, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
   m_PrefabInstance: {fileID: 1357928510}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &597731831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186387123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximity
+  player: {fileID: 819390937}
+  npc: {fileID: 597731830}
+  detectionRadius: 1
+  interactPrompt: {fileID: 779773104}
+--- !u!114 &597731832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186387123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
+  player: {fileID: 0}
+  npc: {fileID: 0}
+  detectionRadius: 1
+  itemId: Door_13_Brown (1)
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+  requiredCompletedQuests:
+  - patron_quest
+  - music_quest
+  - bellhop_quest
+  - bar_quest
+--- !u!65 &597731833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186387123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &607521795
 GameObject:
   m_ObjectHideFlags: 0
@@ -9186,6 +9270,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4651603642805868, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
   m_PrefabInstance: {fileID: 1956739518}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &779773104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779773105}
+  - component: {fileID: 779773106}
+  m_Layer: 0
+  m_Name: Interact Prompt (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779773105
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779773104}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.1976995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 143518985}
+  m_LocalEulerAnglesHint: {x: 360, y: 360, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.1304874, y: -2.0667498}
+  m_SizeDelta: {x: 14.749, y: 2.9381}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!23 &779773106
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779773104}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &785273986 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7648779294783089894, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
@@ -10507,6 +10676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882623618}
+  - component: {fileID: 882623619}
   m_Layer: 0
   m_Name: shelf
   m_TagString: Untagged
@@ -10555,6 +10725,20 @@ Transform:
   - {fileID: 2130726572}
   m_Father: {fileID: 1056063664}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882623619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882623617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7d78fbc1b24db47b08012c075e2f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WallSection
+  hiddenAlpha: 0.15
+  fadeSpeed: 6
 --- !u!114 &884224936 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6022793294954336388, guid: d3b3c64063306458198a9fa463b82d03, type: 3}
@@ -13762,6 +13946,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1181715738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15817,20 +16002,24 @@ PrefabInstance:
       value: Door_13_Brown (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      propertyPath: m_TagString
+      value: selectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1277515215171538, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1908674092843544, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 4651603642805868, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_RootOrder
@@ -15874,7 +16063,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4221336976199832, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1991852542}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597731833}
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597731832}
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597731831}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1 &1367377732
 GameObject:
@@ -22097,6 +22295,7 @@ MonoBehaviour:
   requiredQuestId: patron_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1515933841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22233,7 +22432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCProximity
   player: {fileID: 819390937}
   npc: {fileID: 1519548516}
-  detectionRadius: 2
+  detectionRadius: 2.5
   interactPrompt: {fileID: 570797863}
 --- !u!1001 &1523429014
 PrefabInstance:
@@ -23262,6 +23461,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1592738230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23417,6 +23617,7 @@ MonoBehaviour:
   requiredQuestId: music_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1597338098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23478,6 +23679,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1618985125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23524,20 +23726,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 143518985}
     m_Modifications:
     - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      propertyPath: m_TagString
+      value: selectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1277515215171538, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 1908674092843544, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 4651603642805868, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       propertyPath: m_RootOrder
@@ -23584,7 +23790,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4221336976199832, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 454734526}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104851650}
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104851649}
+    - targetCorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104851648}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1 &1643091800 stripped
 GameObject:
@@ -25519,6 +25734,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1868188160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26099,6 +26315,7 @@ MonoBehaviour:
   requiredQuestId: bellhop_quest
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1898517059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26589,6 +26806,7 @@ MonoBehaviour:
   requiredQuestId: 
   completeQuestId: 
   startQuestId: 
+  requiredCompletedQuests: []
 --- !u!65 &1928626033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32476,9 +32694,9 @@ MonoBehaviour:
     - I don't have any money for you but I can tell you this...
     - 'I''ve worked here for a long time. I was here when the orignal murder happened.
       The killer was never found... '
-    - 'The staff live at the other end of the hall, away from Fluffy, but last night
-      I was woken up by yelling coming from Fluffy''s side of the hall. Funnily,
-      Bar Cat was nowhere to be found. '
+    - 'The staff live down the hall from Fluffy, but last night I was woken up by
+      yelling coming from Fluffy''s end of the hall.  '
+    - 'Funnily, Bar Cat was nowhere to be found... '
     startQuestId: 
     startQuestIds: []
     completeQuestId: music_quest
@@ -38012,6 +38230,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8374330514089192982, guid: 26a2420e41111fa4384c8adc35b250b1, type: 3}
   m_PrefabInstance: {fileID: 1710347788}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2104851647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+  m_PrefabInstance: {fileID: 1626273498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2104851648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104851647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximity
+  player: {fileID: 819390937}
+  npc: {fileID: 232663546}
+  detectionRadius: 1
+  interactPrompt: {fileID: 779773104}
+--- !u!114 &2104851649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104851647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
+  player: {fileID: 0}
+  npc: {fileID: 0}
+  detectionRadius: 1
+  itemId: Door_13_Brown
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
+  requiredCompletedQuests:
+  - patron_quest
+  - music_quest
+  - bellhop_quest
+  - bar_quest
+--- !u!65 &2104851650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104851647}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2114908469
 PrefabInstance:
   m_ObjectHideFlags: 0
