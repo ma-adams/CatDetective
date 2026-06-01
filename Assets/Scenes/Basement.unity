@@ -33933,9 +33933,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - bellhop cat is nervous, hints he knows something but won't talk until you've
-      done something for him
-    - It's the end of Patron Cat's stay and I need to bring him his bag.
+    - I'm so happy you came! Things were getting scary here!
+    - Now that we're alone I can tell you what I know...
+    - but it's the end of Patron Cat's stay and I lost one of his suitcases!
     - But it's a mess down here! Can you help me find it?
     startQuestId: 
     startQuestIds:
