@@ -24594,7 +24594,7 @@ MonoBehaviour:
     fallbackDialogue: 
   rewardDialogue:
     sentences:
-    - 'Your room is ready! Head on over to the elevators after picking up your key. '
+    - 'Your room is ready! Head on over to the stairs after picking up your key. '
     startQuestId: 
     startQuestIds: []
     completeQuestId: next_level
@@ -24602,7 +24602,7 @@ MonoBehaviour:
     fallbackDialogue: 
   completedDialogue:
     sentences:
-    - 'Your room is ready! Head on over to the elevators after picking up your key. '
+    - 'Your room is ready! Head on over to the stairs after picking up your key. '
     startQuestId: 
     startQuestIds: []
     completeQuestId: 
