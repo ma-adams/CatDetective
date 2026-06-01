@@ -19462,7 +19462,7 @@ MonoBehaviour:
     sentences: []
     startQuestId: 
     startQuestIds: []
-    completeQuestId: found_fluffy
+    completeQuestId: find_fluffy
     requiredItem: 
     fallbackDialogue: 
   rewardDialogue:
@@ -19482,7 +19482,7 @@ MonoBehaviour:
   requiredItem: 
   requiredItems: []
   requiredCompletedQuests: []
-  questId: 
+  questId: find_fluffy
 --- !u!114 &639326498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33935,8 +33935,8 @@ MonoBehaviour:
     sentences:
     - I'm so happy you came! Things were getting scary here!
     - Now that we're alone I can tell you what I know...
-    - but it's the end of Patron Cat's stay and I lost one of his suitcases!
-    - But it's a mess down here! Can you help me find it?
+    - But it's the end of Patron Cat's stay and I lost one of his suitcases!
+    - It's a mess down here! Can you help me find it?
     startQuestId: 
     startQuestIds:
     - find_the_suitcases
@@ -33945,17 +33945,23 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   questDialogue:
-    sentences: []
+    sentences:
+    - It's a mess down here! Can you help me find Patron Cat's suitcase?
     startQuestId: 
     startQuestIds: []
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   rewardDialogue:
-    sentences: []
+    sentences:
+    - 'Thanks for finding the suitcase!  '
+    - 'I swear I didn''t know about the shady business going on! At least not before
+      I accidentally overheard a deal. '
+    - 'I had seen Fluffy before at the hotel and called him right away. I hope you
+      find him! I don''t want to be next! '
     startQuestId: 
     startQuestIds: []
-    completeQuestId: 
+    completeQuestId: find_the_suitcases
     requiredItem: 
     fallbackDialogue: 
   completedDialogue:
@@ -33965,10 +33971,10 @@ MonoBehaviour:
     completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
-  requiredItem: 
+  requiredItem: Suitcase (1)
   requiredItems: []
   requiredCompletedQuests: []
-  questId: bellhop_quest
+  questId: find_the_suitcases
 --- !u!114 &1095349679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49504,20 +49510,6 @@ MonoBehaviour:
   requiredQuestId: find_the_suitcases
   completeQuestId: 
   startQuestId: 
---- !u!114 &1439464189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439464180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d5018f37bc64bb585777cfb240f8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestCatalyst
-  questId: find_the_suitcases
-  notification: {fileID: 0}
 --- !u!114 &1439464190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61191,9 +61183,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1439464190}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1439464189}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91e1356f1e80e02439e4cfcea9dba872, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1439464191}
