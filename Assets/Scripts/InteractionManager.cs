@@ -42,9 +42,15 @@ public class InteractionManager : MonoBehaviour
             if (puzzle != null && puzzle.TryTriggerPuzzle()) return;
 
             closest.GetComponent<DialogueTrigger>()?.TriggerDialogue();
-            closest.GetComponent<ConditionalPickup>()?.Pickup();
-            closest.GetComponent<ClickToHide>()?.PickUp();
-            closest.GetComponent<QuestCatalyst>()?.completeQuest();
+
+            // If dialogue opened (sentences exist), defer pickups to DialogueManager.EndDialogue.
+            // If no dialogue opened (empty branch or no trigger), run pickups immediately.
+            if (!DialogueManager.IsOpen)
+            {
+                closest.GetComponent<ConditionalPickup>()?.Pickup();
+                closest.GetComponent<ClickToHide>()?.PickUp();
+                closest.GetComponent<QuestCatalyst>()?.completeQuest();
+            }
         }
     }
 }

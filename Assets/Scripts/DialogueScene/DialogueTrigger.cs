@@ -24,10 +24,13 @@ public class DialogueTrigger : MonoBehaviour
         FindFirstObjectByType<DialogueManager>().StartDialogue(toPlay, this);
     }
 
+    private static bool HasContent(Dialogue d) =>
+        d != null && d.sentences != null && d.sentences.Length > 0;
+
     private Dialogue GetDialogueBranch() {
-        if (MainManager.mainManager == null) {
-            return dialogue;
-        }
+        if (MainManager.mainManager == null)
+            return HasContent(dialogue) ? dialogue : null;
+
         bool questComplete = !string.IsNullOrEmpty(questId)
                              && MainManager.mainManager.completedQuests.Contains(questId);
         bool questActive = !string.IsNullOrEmpty(questId)
@@ -35,13 +38,11 @@ public class DialogueTrigger : MonoBehaviour
         bool hasAllItems = HasRequiredItems();
         bool hasCompletedPrereqs = HasRequiredCompletedQuests();
 
-        if (questComplete && completedDialogue != null) return completedDialogue;
-        if (questActive && hasAllItems && hasCompletedPrereqs && rewardDialogue != null)
-            return rewardDialogue;
-        if (questActive && questDialogue != null)
-            return questDialogue;
-
-        return dialogue;
+        if (questComplete && HasContent(completedDialogue)) return completedDialogue;
+        if (questActive && hasAllItems && hasCompletedPrereqs && HasContent(rewardDialogue)) return rewardDialogue;
+        if (questActive && HasContent(questDialogue)) return questDialogue;
+        if (HasContent(dialogue)) return dialogue;
+        return null;
     }
 
     private bool HasRequiredItems()

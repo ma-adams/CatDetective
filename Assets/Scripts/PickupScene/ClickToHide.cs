@@ -20,10 +20,18 @@ public class ClickToHide : MonoBehaviour
 
     void Update()
     {
+        // Keep the Outline in sync so InteractionManager can only detect this object when interactable.
+        Outline ol = GetComponent<Outline>();
+        if (ol != null) ol.enabled = IsInteractable();
+
+        // Objects with a DialogueTrigger are handled by InteractionManager (E-key),
+        // which calls TriggerDialogue then PickUp in the correct order.
+        if (GetComponent<DialogueTrigger>() != null) return;
+
         // mouse click
         if (Mouse.current == null || !Mouse.current.leftButton.wasPressedThisFrame)
             return;
-    
+
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (Physics.Raycast(ray, out RaycastHit hit))

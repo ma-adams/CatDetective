@@ -139,7 +139,12 @@ public class DialogueManager : MonoBehaviour
                 MainManager.mainManager.RemoveItem(item);
     }
 
+    ClickToHide pendingPickup = currentTrigger?.GetComponent<ClickToHide>();
+    ConditionalPickup pendingConditionalPickup = currentTrigger?.GetComponent<ConditionalPickup>();
     currentTrigger = null;
     currentDialogue = null;
+
+    pendingPickup?.PickUp();
+    pendingConditionalPickup?.Pickup();
     }
 }
