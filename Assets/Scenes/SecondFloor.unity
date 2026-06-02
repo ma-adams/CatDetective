@@ -22710,7 +22710,7 @@ MonoBehaviour:
     startQuestId: 
     startQuestIds: []
     completeQuestId: 
-    requiredItem: masterKey
+    requiredItem: 
     fallbackDialogue: 
   requiredItem: 
   requiredItems: []
@@ -22840,7 +22840,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781403648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
   m_Name: 
@@ -22848,7 +22848,7 @@ MonoBehaviour:
   player: {fileID: 819390937}
   npc: {fileID: 1781403650}
   detectionRadius: 2
-  interactPrompt: {fileID: 0}
+  interactPrompt: {fileID: 141510505}
 --- !u!1001 &1810739487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29511,7 +29511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - 'Music Cat is on her break and taking to Mr. Curio.   '
+    - 'Music Cat is on her break and talking to Mr. Curio.   '
     startQuestId: 
     startQuestIds: []
     completeQuestId: 
@@ -29549,7 +29549,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995693079}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
   m_Name: 
@@ -29557,7 +29557,7 @@ MonoBehaviour:
   player: {fileID: 819390937}
   npc: {fileID: 1995693082}
   detectionRadius: 2
-  interactPrompt: {fileID: 0}
+  interactPrompt: {fileID: 141510505}
 --- !u!4 &2018688551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 509778033759443458, guid: 744fdfc5e08624943b22ba3c3e353e07, type: 3}
