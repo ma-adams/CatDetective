@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     public string[] requiredItems; // multiple items needed to complete the quest
     public string[] requiredCompletedQuests; // quests that must be completed before reward dialogue
     public string questId; // quest this NPC is associated with
+    public BasementQuiz quizToTriggerOnEnd; // if set, opens this quiz when dialogue finishes
 
     public void TriggerDialogue()
     {

@@ -1057,8 +1057,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1465,7 +1465,7 @@ RectTransform:
   m_GameObject: {fileID: 153943949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 1.5, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 137602544}
@@ -1473,7 +1473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 15}
+  m_AnchoredPosition: {x: 0, y: -7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &153943951
@@ -2152,6 +2152,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: patron_quest
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!1 &262838360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1202036086350856, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
@@ -4303,6 +4304,7 @@ MonoBehaviour:
   requiredCompletedQuests:
   - find_small_key
   questId: search_fluffys_room
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &554334064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,7 +4958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &598466357
@@ -5266,7 +5268,7 @@ RectTransform:
   m_GameObject: {fileID: 665084482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 1.5, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1120834737}
@@ -5274,7 +5276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -80, y: 15}
+  m_AnchoredPosition: {x: -64.4, y: -7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665084484
@@ -6554,8 +6556,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9579,7 +9581,7 @@ RectTransform:
   m_GameObject: {fileID: 1002652370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 1.5, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1064407309}
@@ -9587,7 +9589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 80, y: 15}
+  m_AnchoredPosition: {x: 61.5, y: -7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002652372
@@ -9898,6 +9900,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!1 &1015512502
 GameObject:
   m_ObjectHideFlags: 0
@@ -10555,8 +10558,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11144,6 +11147,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: bellhop_quest
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1095349679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11321,8 +11325,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13454,6 +13458,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: find_small_key
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1329817100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19548,6 +19553,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1446644823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20411,6 +20417,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: bar_quest
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1519548519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20978,6 +20985,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1581496529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21112,6 +21120,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!1001 &1612332081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22807,6 +22816,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: talk_to_patrons
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1751022276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22933,6 +22943,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1781403653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23527,6 +23538,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: read_creepy_note
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1867071528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23591,6 +23603,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: solve_the_chute
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1883085936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24112,6 +24125,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!1 &1931443555
 GameObject:
   m_ObjectHideFlags: 0
@@ -24400,6 +24414,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!1 &1965780373 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3268182393475442383, guid: a2e6444451e398844bfa41ba8f0ebfb2, type: 3}
@@ -29566,6 +29581,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: music_quest
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &1995693085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35028,6 +35044,7 @@ MonoBehaviour:
   - small_key
   requiredCompletedQuests: []
   questId: open_locked_case
+  quizToTriggerOnEnd: {fileID: 0}
 --- !u!114 &2137679564
 MonoBehaviour:
   m_ObjectHideFlags: 0

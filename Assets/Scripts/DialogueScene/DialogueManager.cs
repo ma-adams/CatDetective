@@ -139,7 +139,10 @@ public class DialogueManager : MonoBehaviour
                 MainManager.mainManager.RemoveItem(item);
     }
 
+    BasementQuiz pendingQuiz = currentTrigger?.quizToTriggerOnEnd;
     currentTrigger = null;
     currentDialogue = null;
+
+    pendingQuiz?.OpenQuiz();
     }
 }
