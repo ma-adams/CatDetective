@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     public string[] requiredItems; // multiple items needed to complete the quest
     public string[] requiredCompletedQuests; // quests that must be completed before reward dialogue
     public string questId; // quest this NPC is associated with
+    public bool pickUpOnRewardOnly = false; // when true, ClickToHide.PickUp only runs after rewardDialogue
 
     public void TriggerDialogue()
     {
@@ -41,6 +42,13 @@ public class DialogueTrigger : MonoBehaviour
         if (questComplete && HasContent(completedDialogue)) return completedDialogue;
         if (questActive && hasAllItems && hasCompletedPrereqs && HasContent(rewardDialogue)) return rewardDialogue;
         if (questActive && HasContent(questDialogue)) return questDialogue;
+
+        // Item-gated reward with no active quest (e.g. key-locked doors)
+        bool hasAnyItemRequirement = !string.IsNullOrEmpty(requiredItem)
+                                     || (requiredItems != null && requiredItems.Length > 0);
+        if (!questActive && !questComplete && hasAnyItemRequirement && hasAllItems && HasContent(rewardDialogue))
+            return rewardDialogue;
+
         if (HasContent(dialogue)) return dialogue;
         return null;
     }

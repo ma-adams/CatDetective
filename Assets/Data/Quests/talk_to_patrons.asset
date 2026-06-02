@@ -16,5 +16,4 @@ MonoBehaviour:
   displayName: Talk to the Patrons
   activeDescription: 'Patron Cat''s room is around here. Let''s try talking to him
     again. '
-  completedDescription: 'You knocked on Patron Cat''s door. You heard two cats arguing
-    but no one opened the door. '
+  completedDescription: 'You searched Patron Cat''s room and found nothing. '

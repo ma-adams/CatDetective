@@ -2044,6 +2044,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: talk_to_patrons
+  pickUpOnRewardOnly: 0
 --- !u!114 &209151667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,6 +4230,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: talk_to_patrons
+  pickUpOnRewardOnly: 0
 --- !u!4 &530256241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3106554150203184529, guid: 9cf94939f3dfab54eb62e181bdc60594, type: 3}
@@ -4425,6 +4427,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: search_fluffys_room
+  pickUpOnRewardOnly: 0
 --- !u!114 &554334064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10003,6 +10006,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!1 &1015512502
 GameObject:
   m_ObjectHideFlags: 0
@@ -11250,6 +11254,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: bellhop_quest
+  pickUpOnRewardOnly: 0
 --- !u!114 &1095349679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12262,6 +12267,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1751022276}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751022284}
+    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751022283}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1 &1202426037
 GameObject:
@@ -13559,6 +13570,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: find_small_key
+  pickUpOnRewardOnly: 0
 --- !u!114 &1329817100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14222,7 +14234,7 @@ PrefabInstance:
       addedObject: {fileID: 1380593344}
     - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1380593343}
+      addedObject: {fileID: 1380593353}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!4 &1380593341 stripped
 Transform:
@@ -14234,7 +14246,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
   m_PrefabInstance: {fileID: 1380593340}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1380593343
+--- !u!114 &1380593344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14243,23 +14255,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1380593342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bddabd948f54996af6dae5cd352a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConditionalPickup
-  itemId: Door
-  requiredCompletedQuests:
-  - 
-  completeQuestId: 
-  startQuestId: 
---- !u!114 &1380593344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380593342}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
@@ -14267,7 +14262,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   detectionRadius: 1
   itemId: Door
-  requiredQuestId: master_key
+  requiredQuestId: 
   completeQuestId: 
   startQuestId: 
 --- !u!114 &1380593345
@@ -14297,7 +14292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     sentences:
-    - This is Mr. curio's room.
+    - This is Mr. curio's room. It's locked.
     startQuestId: 
     startQuestIds: []
     completeQuestId: 
@@ -14305,16 +14300,17 @@ MonoBehaviour:
     fallbackDialogue: 
   questDialogue:
     sentences: []
-    startQuestId: search_curios_room
+    startQuestId: 
     startQuestIds: []
     completeQuestId: 
     requiredItem: masterKey
     fallbackDialogue: 
   rewardDialogue:
-    sentences: []
+    sentences:
+    - 'You unlocked the door with the Master key. '
     startQuestId: 
     startQuestIds: []
-    completeQuestId: 
+    completeQuestId: search_curios_room
     requiredItem: 
     fallbackDialogue: 
   completedDialogue:
@@ -14325,9 +14321,29 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
-  requiredItems: []
+  requiredItems:
+  - masterKey
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 1
+--- !u!114 &1380593353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380593342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1380763877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19851,9 +19867,9 @@ MonoBehaviour:
   dialogue:
     sentences:
     - This looks like the master key. How did it get in here?
-    startQuestId: 
+    startQuestId: search_curios_room
     startQuestIds: []
-    completeQuestId: 
+    completeQuestId: search_bar_room
     requiredItem: 
     fallbackDialogue: 
   questDialogue:
@@ -19881,6 +19897,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!114 &1446644823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20992,6 +21009,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!114 &1581496529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21208,6 +21226,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!1001 &1612332081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22699,11 +22718,10 @@ MonoBehaviour:
     fallbackDialogue: 
   rewardDialogue:
     sentences:
-    - "You knock. From inside, you can hear two voices \u2014 raised, mid-argument.
-      No one comes to the door."
+    - You unlocked the door with the Master key!
     startQuestId: 
     startQuestIds: []
-    completeQuestId: 
+    completeQuestId: talk_to_patrons
     requiredItem: masterKey
     fallbackDialogue: 
   completedDialogue:
@@ -22716,9 +22734,11 @@ MonoBehaviour:
     requiredItem: 
     fallbackDialogue: 
   requiredItem: 
-  requiredItems: []
+  requiredItems:
+  - masterKey
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 1
 --- !u!114 &1751022276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22732,6 +22752,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
   questData: {fileID: 11400000, guid: a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0, type: 2}
+--- !u!114 &1751022283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751022267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1751022284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751022267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToHide
+  player: {fileID: 0}
+  npc: {fileID: 0}
+  detectionRadius: 3
+  itemId: 
+  requiredQuestId: 
+  completeQuestId: 
+  startQuestId: 
 --- !u!1 &1761116325
 GameObject:
   m_ObjectHideFlags: 0
@@ -22836,6 +22893,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!114 &1781403653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23442,6 +23500,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: read_creepy_note
+  pickUpOnRewardOnly: 0
 --- !u!114 &1867071528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23525,6 +23584,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: solve_the_chute
+  pickUpOnRewardOnly: 0
 --- !u!114 &1883085936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24047,6 +24107,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!1 &1931443555
 GameObject:
   m_ObjectHideFlags: 0
@@ -24398,6 +24459,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: 
+  pickUpOnRewardOnly: 0
 --- !u!1001 &1972359726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29545,6 +29607,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: music_quest
+  pickUpOnRewardOnly: 0
 --- !u!114 &1995693085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34805,6 +34868,7 @@ MonoBehaviour:
   requiredItems: []
   requiredCompletedQuests: []
   questId: open_locked_case
+  pickUpOnRewardOnly: 0
 --- !u!114 &2137679564
 MonoBehaviour:
   m_ObjectHideFlags: 0

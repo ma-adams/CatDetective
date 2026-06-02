@@ -129,22 +129,26 @@ public class DialogueManager : MonoBehaviour
         MainManager.mainManager.quests.Remove(currentDialogue.completeQuestId);
         MainManager.mainManager.CompleteQuest(currentDialogue.completeQuestId);
 
-        // Remove single item (existing quests)
-        if (!string.IsNullOrEmpty(currentTrigger.requiredItem))
-            MainManager.mainManager.RemoveItem(currentTrigger.requiredItem);
+        // Remove items only for quest hand-ins, not for key-locked doors
+        if (!currentTrigger.pickUpOnRewardOnly)
+        {
+            if (!string.IsNullOrEmpty(currentTrigger.requiredItem))
+                MainManager.mainManager.RemoveItem(currentTrigger.requiredItem);
 
-        // Remove multiple items (new multi-item quests)
-        if (currentTrigger.requiredItems != null)
-            foreach (string item in currentTrigger.requiredItems)
-                MainManager.mainManager.RemoveItem(item);
+            if (currentTrigger.requiredItems != null)
+                foreach (string item in currentTrigger.requiredItems)
+                    MainManager.mainManager.RemoveItem(item);
+        }
     }
 
+    bool wasRewardDialogue = currentTrigger != null && currentDialogue == currentTrigger.rewardDialogue;
+    bool pickUpOnRewardOnly = currentTrigger != null && currentTrigger.pickUpOnRewardOnly;
     ClickToHide pendingPickup = currentTrigger?.GetComponent<ClickToHide>();
     ConditionalPickup pendingConditionalPickup = currentTrigger?.GetComponent<ConditionalPickup>();
     currentTrigger = null;
     currentDialogue = null;
 
-    pendingPickup?.PickUp();
+    if (!pickUpOnRewardOnly || wasRewardDialogue) pendingPickup?.PickUp();
     pendingConditionalPickup?.Pickup();
     }
 }
