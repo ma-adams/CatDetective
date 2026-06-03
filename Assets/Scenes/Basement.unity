@@ -12499,47 +12499,49 @@ MonoBehaviour:
   requiredCompletedQuests:
   - find_fluffy
   questions:
-  - question: question one
+  - question: Fluffy is...
     answers:
-    - 'yes '
-    - no
-    - maybe
+    - alive!
+    - dead!
+    - still missing?
     correctAnswerIndex: 0
     wrongAnswerText: try again!
-  - question: question two
+  - question: Two cats were working with the mice mob!
     answers:
-    - 'yes '
-    - no
-    - maybe
+    - Bar Cat and Patron Cat
+    - Mr. Curio and Music Cat
+    - Patron Cat and Mr. Curio
+    correctAnswerIndex: 1
+    wrongAnswerText: try again!
+  - question: The Mice Mob was smuggling...
+    answers:
+    - cheese
+    - milk
+    - catnip
     correctAnswerIndex: 0
     wrongAnswerText: try again!
-  - question: question one
+  - question: Who reported the crimes to Fluffy?
     answers:
-    - 'yes '
-    - no
-    - maybe
-    correctAnswerIndex: 0
+    - Patron Cat
+    - Bar Cat
+    - Bellhop Cat
+    correctAnswerIndex: 2
     wrongAnswerText: try again!
-  - question: question one
+  - question: Some objects were out of place. Looks like this Cat was planning to
+      take the good for themselves!
     answers:
-    - 'yes '
-    - no
-    - maybe
-    correctAnswerIndex: 0
+    - Patron Cat
+    - Mr. Curio
+    - Music Cat
+    correctAnswerIndex: 2
     wrongAnswerText: try again!
-  - question: question one
+  - question: Meanwhile Bar Cat was blissfully unaware and on their own mission to
+      get some...
     answers:
-    - 'yes '
-    - no
-    - maybe
-    correctAnswerIndex: 0
-    wrongAnswerText: try again!
-  - question: question one
-    answers:
-    - 'yes '
-    - no
-    - maybe
-    correctAnswerIndex: 0
+    - money
+    - catnip
+    - cheese
+    correctAnswerIndex: 1
     wrongAnswerText: try again!
   quizPanel: {fileID: 2115815280}
   questionText: {fileID: 1311038154}
@@ -12555,9 +12557,22 @@ MonoBehaviour:
   wrongAnswerFeedbackText: {fileID: 1728127717}
   completionPanel: {fileID: 1953149507}
   completionMessageText: {fileID: 1855584347}
-  completionMessage: Good job! Thanks for playing!
+  completionMessage: 'You solved the case!
+
+    Thanks for playing Cat Detective!'
   creditsText: {fileID: 1743891081}
-  credits: 'Here''s credits:'
+  credits: 'Created By
+
+    Makena Adams
+
+    Emile De L''Isle
+
+    Daphne Jilot
+
+    Lila
+    Silberman
+
+'
 --- !u!1001 &398622235
 PrefabInstance:
   m_ObjectHideFlags: 0
