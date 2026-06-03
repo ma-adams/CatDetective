@@ -26,8 +26,13 @@ public class NPCProximity : MonoBehaviour
             if (!isPlayerNearby)
             {
                 isPlayerNearby = true;
-                interactPrompt.SetActive(true);
             }
+
+            // Only show the "E to interact" prompt if the pickup is currently interactable
+            // (e.g. its required quest has been triggered). Updates live as quest state changes.
+            ClickToHide pickup = GetComponent<ClickToHide>();
+            bool interactable = pickup == null || pickup.IsInteractable();
+            interactPrompt.SetActive(interactable);
         } else {
             if (isPlayerNearby)
             {
