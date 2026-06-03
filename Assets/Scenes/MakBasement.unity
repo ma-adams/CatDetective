@@ -12413,12 +12413,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396755101}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d235d8bb373bf4f51a8ac35b3b8281c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCProximity
-  player: {fileID: 0}
+  player: {fileID: 1180023792}
   npc: {fileID: 396755099}
   detectionRadius: 1
   interactPrompt: {fileID: 1889202137}
@@ -12436,7 +12436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaundryChutePuzzle
   questId: solve_the_mystery
   requiredCompletedQuests:
-  - 
+  - find_fluffy
   nextScene: Ending
   quizPanel: {fileID: 2115815280}
   questionText: {fileID: 1311038154}
@@ -12473,9 +12473,8 @@ MonoBehaviour:
     sentences:
     - You found me!!
     - One more thing. Did you solve the mystery?
-    startQuestId: find_fluffy
-    startQuestIds:
-    - find_fluffy
+    startQuestId: 
+    startQuestIds: []
     completeQuestId: find_fluffy
     requiredItem: 
     fallbackDialogue: 
@@ -12483,7 +12482,7 @@ MonoBehaviour:
     sentences: []
     startQuestId: 
     startQuestIds: []
-    completeQuestId: found_fluffy
+    completeQuestId: 
     requiredItem: 
     fallbackDialogue: 
   rewardDialogue:
@@ -12503,7 +12502,7 @@ MonoBehaviour:
   requiredItem: 
   requiredItems: []
   requiredCompletedQuests: []
-  questId: 
+  questId: solve_the_mystery
   pickUpOnRewardOnly: 0
 --- !u!114 &396755106
 MonoBehaviour:
