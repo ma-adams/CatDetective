@@ -11,17 +11,11 @@ public class ClickToHide : MonoBehaviour
     [SerializeField] private string requiredQuestId;
     [SerializeField] private string completeQuestId;
     [SerializeField] private string startQuestId;
-    [SerializeField] private string[] requiredCompletedQuests; // for door outline
 
     public bool IsInteractable()
     {
-        if (string.IsNullOrEmpty(requiredQuestId) && (requiredCompletedQuests == null || requiredCompletedQuests.Length == 0)) 
-            return true;
-        
-        if (!string.IsNullOrEmpty(requiredQuestId))
-            return MainManager.mainManager != null && MainManager.mainManager.quests.Contains(requiredQuestId);
-        
-        return MainManager.mainManager != null && MainManager.mainManager.AllQuestsComplete(requiredCompletedQuests);
+        if (string.IsNullOrEmpty(requiredQuestId)) return true;
+        return MainManager.mainManager != null && MainManager.mainManager.quests.Contains(requiredQuestId);
     }
 
     void Update()

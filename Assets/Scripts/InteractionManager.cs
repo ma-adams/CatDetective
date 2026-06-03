@@ -21,7 +21,6 @@ public class InteractionManager : MonoBehaviour
                                 || col.GetComponent<ConditionalPickup>() != null
                                 || col.GetComponent<DialogueTrigger>() != null
                                 || col.GetComponent<LaundryChutePuzzle>() != null
-                                || col.GetComponent<BasementQuiz>() != null
                                 || col.GetComponent<QuestCatalyst>() != null;
             if (!hasInteractable) continue;
 
@@ -38,12 +37,9 @@ public class InteractionManager : MonoBehaviour
 
         if (closest != null)
         {
-            // Puzzle components take priority when their conditions are met.
+            // LaundryChutePuzzle takes priority when its conditions are met.
             var puzzle = closest.GetComponent<LaundryChutePuzzle>();
             if (puzzle != null && puzzle.TryTriggerPuzzle()) return;
-
-            var basementQuiz = closest.GetComponent<BasementQuiz>();
-            if (basementQuiz != null && basementQuiz.TryTriggerPuzzle()) return;
 
             closest.GetComponent<DialogueTrigger>()?.TriggerDialogue();
 
