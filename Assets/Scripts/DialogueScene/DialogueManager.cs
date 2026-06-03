@@ -143,6 +143,7 @@ public class DialogueManager : MonoBehaviour
 
     bool wasRewardDialogue = currentTrigger != null && currentDialogue == currentTrigger.rewardDialogue;
     bool pickUpOnRewardOnly = currentTrigger != null && currentTrigger.pickUpOnRewardOnly;
+    BasementQuiz pendingQuiz = currentTrigger?.quizToTriggerOnEnd;
     ClickToHide pendingPickup = currentTrigger?.GetComponent<ClickToHide>();
     ConditionalPickup pendingConditionalPickup = currentTrigger?.GetComponent<ConditionalPickup>();
     currentTrigger = null;
@@ -150,5 +151,6 @@ public class DialogueManager : MonoBehaviour
 
     if (!pickUpOnRewardOnly || wasRewardDialogue) pendingPickup?.PickUp();
     pendingConditionalPickup?.Pickup();
+    pendingQuiz?.OpenQuiz();
     }
 }

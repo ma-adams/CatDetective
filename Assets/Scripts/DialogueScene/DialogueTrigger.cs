@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
     public string[] requiredCompletedQuests; // quests that must be completed before reward dialogue
     public string questId; // quest this NPC is associated with
     public bool pickUpOnRewardOnly = false; // when true, ClickToHide.PickUp only runs after rewardDialogue
+    public BasementQuiz quizToTriggerOnEnd; // if set, opens this quiz when dialogue finishes
 
     public void TriggerDialogue()
     {
