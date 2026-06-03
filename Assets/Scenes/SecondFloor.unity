@@ -12270,9 +12270,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1751022284}
-    - targetCorrespondingSourceObject: {fileID: 1889589370831100, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1751022283}
   m_SourcePrefab: {fileID: 100100000, guid: 36b7d5e1c900faf45939343c435a3828, type: 3}
 --- !u!1 &1202426037
 GameObject:
@@ -14253,7 +14250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380593342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
@@ -14333,7 +14330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380593342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -22718,7 +22715,8 @@ MonoBehaviour:
     fallbackDialogue: 
   rewardDialogue:
     sentences:
-    - You unlocked the door with the Master key!
+    - "You knock. From inside, you can hear two voices \u2014 raised, mid-argument.
+      No one comes to the door."
     startQuestId: 
     startQuestIds: []
     completeQuestId: talk_to_patrons
@@ -22752,24 +22750,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestRegistrar
   questData: {fileID: 11400000, guid: a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0, type: 2}
---- !u!114 &1751022283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751022267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Outline
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &1751022284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22777,7 +22757,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751022267}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487fa61c0efc44c45a4108f3828a6e4b, type: 3}
   m_Name: 
