@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: talk_to_patrons
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: talk_to_patrons
-  displayName: Talk to the Patrons
+  displayName: Listen to the Patron
   activeDescription: 'Patron Cat''s room is around here. Let''s try talking to him
     again. '
   completedDescription: 'You knocked on Patron Cat''s door. You heard two cats arguing
