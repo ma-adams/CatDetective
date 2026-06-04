@@ -24,16 +24,19 @@ public class JournalManager : MonoBehaviour
 
     private bool isOpen = false;
     private string selectedQuestId = null;
+    private MainManager subscribedManager;
 
     void Start()
     {
         journalPanel.SetActive(false);
         if (notification != null) notification.SetActive(false);
 
-        if (MainManager.mainManager != null)
+        subscribedManager = MainManager.mainManager;
+
+        if (subscribedManager != null)
         {
-            MainManager.mainManager.onQuestsChanged += OnQuestsChanged;
-            MainManager.mainManager.onQuestAdded += OnQuestAdded;
+            subscribedManager.onQuestsChanged += OnQuestsChanged;
+            subscribedManager.onQuestAdded += OnQuestAdded;
         }
 
         // Wire up button clicks via Button component
@@ -66,6 +69,20 @@ public class JournalManager : MonoBehaviour
         ConfigureDetailText();
         RefreshButtons();
         ShowMainMystery();
+    }
+
+    private void OnDestroy()
+    {
+        if (subscribedManager != null)
+        {
+            subscribedManager.onQuestsChanged -= OnQuestsChanged;
+            subscribedManager.onQuestAdded -= OnQuestAdded;
+        }
+
+        if (_sfx != null)
+        {
+            Destroy(_sfx.gameObject);
+        }
     }
 
     private void ConfigureDetailText()
