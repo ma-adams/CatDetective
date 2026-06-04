@@ -106,14 +106,14 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
     isOpen = false;
-    _isOpen = false;
+    // _isOpen stays true until after cleanup so InteractionManager can't re-fire in the same frame
     animator.SetBool("isOpen", false);
 
-    if (currentTrigger == null || currentDialogue == null) return;
+    if (currentTrigger == null || currentDialogue == null) { _isOpen = false; return; }
     if (MainManager.mainManager == null)
     {
         Debug.LogError("MainManager missing from scene!");
-        return;
+        _isOpen = false; return;
     }
 
     if (!string.IsNullOrEmpty(currentDialogue.startQuestId))
@@ -152,5 +152,6 @@ public class DialogueManager : MonoBehaviour
     if (!pickUpOnRewardOnly || wasRewardDialogue) pendingPickup?.PickUp();
     pendingConditionalPickup?.Pickup();
     pendingQuiz?.OpenQuiz();
+    _isOpen = false;
     }
 }

@@ -17,6 +17,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if (DialogueManager.IsOpen) return;
         Dialogue toPlay = GetDialogueBranch();
         if (toPlay == null)
         {

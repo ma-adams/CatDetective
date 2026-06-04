@@ -22404,8 +22404,7 @@ MonoBehaviour:
     fallbackDialogue: 
   rewardDialogue:
     sentences:
-    - "You knock. From inside, you can hear two voices \u2014 raised, mid-argument.
-      No one comes to the door."
+    - 'You unlock the door using the master key. '
     startQuestId: 
     startQuestIds: []
     completeQuestId: talk_to_patrons
@@ -35003,6 +35002,7 @@ MonoBehaviour:
   requiredCompletedQuests:
   - search_curios_room
   - talk_to_patrons
+  - search_fluffys_room
   nextScene: Basement
   quizPanel: {fileID: 842245712}
   questionText: {fileID: 1642385519}
