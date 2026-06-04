@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: search_bar_room
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: search_bar_room
-  displayName: Search the Bar
-  activeDescription: 'Music Cat said her and Bartender Cat''s room was across the
-    hall from Fluffy''s. Let''s try talking to her again. '
-  completedDescription: 'Music Cat didn''t have much to say, but you found Mr. Curio''s
-    master key in her room. '
+  displayName: Find the Master Key
+  activeDescription: 'Let''s try to find that master key. It has to be around here
+    somewhere. '
+  completedDescription: 'The cats didn''t have much to say, but you found Mr. Curio''s
+    master key in Music Cat''s room. '

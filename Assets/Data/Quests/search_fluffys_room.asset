@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: search_fluffys_room
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questId: search_fluffys_room
-  displayName: Search Fluff's Room
+  displayName: Search Fluffy's Room
   activeDescription: "You have the key to Fluffy's room. Let's see if we can figure
     out what happened.\t"
-  completedDescription: 
+  completedDescription: Fluffy had a secret informant? Who could it be?
